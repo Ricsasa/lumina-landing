@@ -9,8 +9,9 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   vite: {
-      plugins: [tailwindcss(), svgr()],
+    plugins: [tailwindcss(), svgr()],
   },
-
+  site: 'https://ricsasa.github.io',
+  base: '/lumina-landing',
   integrations: [react()],
 });
