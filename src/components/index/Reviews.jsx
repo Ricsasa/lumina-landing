@@ -262,7 +262,7 @@ const Rating = ({ isPending, data }) => {
                 <div className="flex justify-around gap-8">
                     <GoogleMapsLogo width={70} className="shrink-0 saturate-50 group-hover:saturate-100 transition-all duration-300" />
                     <div className="flex flex-col justify-center">
-                        <p className="flex flex-row gap-4 pb-2 dark:text-custom-beige font-fira items-center">
+                        <p className="flex flex-col lg:flex-row gap-4 pb-2 dark:text-custom-beige font-fira items-center">
                             <span className="text-sm md:text-xl font-medium">{rating} / 5</span>
                             <span className="flex">
                                 {[...Array(5)].map((_, i) => (
@@ -272,7 +272,7 @@ const Rating = ({ isPending, data }) => {
                                 ))}
                             </span>
                         </p>
-                        <p className="text-sm md:text-lg font-light tracking-wide text-custom-piel/80 dark:text-custom-beige/80">
+                        <p className="text-sm md:text-lg font-light tracking-wide text-custom-piel/80 dark:text-custom-beige/80 text-center">
                             Basado en {total} reseñas
                         </p>
                     </div>

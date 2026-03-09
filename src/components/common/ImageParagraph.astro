@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
     position?: "left" | "right";
     imageSrc?: string | any;
@@ -31,12 +33,10 @@ const imageOrder = isLeft ? "order-2 md:order-1" : "order-2 md:order-2";
         >
             {
                 imageSrc ? (
-                    <img
-                        src={
-                            typeof imageSrc === "string"
-                                ? imageSrc
-                                : imageSrc?.src
-                        }
+                    <Image
+                        src={imageSrc}
+                        width={typeof imageSrc === "string" ? 800 : undefined}
+                        height={typeof imageSrc === "string" ? 800 : undefined}
                         alt={imageAlt}
                         class="w-full h-full object-cover saturate-60"
                     />
