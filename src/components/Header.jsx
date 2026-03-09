@@ -25,23 +25,23 @@ export default function Header() {
     const navigation = [
         {
             name: 'Eliminación de tatuajes',
-            href: '/eliminacion-de-tatuajes'
+            href: '/lumina-landing/eliminacion-de-tatuajes'
         },
         {
             name: 'Eliminación de micropigmentación',
-            href: '/eliminacion-micropigmentacion'
+            href: '/lumina-landing/eliminacion-micropigmentacion'
         },
         {
             name: 'Despigmentación facial y corporal',
-            href: '/despigmentacion'
+            href: '/lumina-landing/despigmentacion'
         },
         {
             name: 'Hollywood Peel',
-            href: '/hollywood-peel'
+            href: '/lumina-landing/hollywood-peel'
         },
         {
             name: 'Microneedling (Dermapen)',
-            href: '/microneedling'
+            href: '/lumina-landing/microneedling'
         },
     ]
 
@@ -54,7 +54,7 @@ export default function Header() {
                     >
                         <div className="flex shrink-0 items-center">
                             <div className={`w-36 md:w-54`}>
-                                <a href="/" className="block focus:outline-none focus:ring-2 focus:ring-custom-piel/50 rounded-lg">
+                                <a href="/lumina-landing" className="block focus:outline-none focus:ring-2 focus:ring-custom-piel/50 rounded-lg">
                                     <VerticalSkinLogo className="text-custom-piel dark:text-custom-beige" alt="Lumina Estudio Láser" />
                                 </a>
                             </div>
@@ -126,13 +126,13 @@ export default function Header() {
 
                     <nav className="flex flex-col space-y-1">
                         <a
-                            href="/#reviews"
+                            href="/lumina-landing/#reviews"
                             className="px-4 py-2 rounded-2xl text-xl md:text-3xl font-medium tracking-wide text-custom-piel dark:text-custom-beige hover:bg-custom-piel/5 dark:hover:bg-custom-beige/5 transition-colors duration-200"
                         >
                             Reseñas
                         </a>
                         <a
-                            href="/#ubicacion"
+                            href="/lumina-landing/#ubicacion"
                             className="px-4 py-2 rounded-2xl text-xl md:text-3xl font-medium tracking-wide text-custom-piel dark:text-custom-beige hover:bg-custom-piel/5 dark:hover:bg-custom-beige/5 transition-colors duration-200"
                         >
                             Nuestra Ubicación
