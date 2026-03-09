@@ -1,6 +1,8 @@
 ---
 import ImageParagraph from "../common/ImageParagraph.astro";
+
 import Axilas from "../../assets/services/despigmentacion/axilas.avif";
+import Manchas from "../../assets/services/despigmentacion/axilas.avif";
 ---
 
 <section
@@ -36,7 +38,11 @@ import Axilas from "../../assets/services/despigmentacion/axilas.avif";
                 linfático.
             </p>
         </ImageParagraph>
-        <ImageParagraph position="right">
+        <ImageParagraph
+            position="right"
+            imageSrc={Manchas.src}
+            imageAlt="Ejemplo de manchas"
+        >
             <p
                 class="text-base md:text-lg text-custom-piel/80 dark:text-custom-beige/80 font-light leading-relaxed text-justify"
             >
