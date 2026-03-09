@@ -1,0 +1,117 @@
+---
+// HeroTinta.astro
+import { Image } from "astro:assets";
+import SkinIcon from "../../assets/branding/skin-icon.svg";
+import BeigeIcon from "../../assets/branding/beige-icon.svg";
+---
+
+<section
+    class="relative w-full min-h-screen overflow-hidden flex items-center justify-center bg-custom-beige-light dark:bg-custom-oscuro text-custom-oscuro dark:text-custom-beige-light transition-colors duration-500"
+>
+    <div
+        class="absolute inset-0 z-10 bg-custom-oscuro dark:bg-custom-beige-light ink-overlay pointer-events-none"
+    >
+    </div>
+
+    <div
+        class="relative z-20 container mx-auto px-6 flex flex-col items-center justify-center text-center gap-12 md:gap-18"
+    >
+        <p
+            class="text-lg md:text-xl max-w-2xl text-custom-piel dark:text-custom-beige subtext opacity-0 translate-y-4"
+        >
+            Excelencia en tratamientos de cuidado para tu piel.
+        </p>
+
+        <div
+            class="relative h-28 md:h-32 w-full flex justify-center items-center"
+        >
+            <h1
+                class="text-4xl md:text-6xl font-bold absolute text-swap-1 text-custom-oscuro dark:text-custom-beige w-full"
+            >
+                ¿Te arrepientes de tu <span
+                    class="line-through decoration-custom-piel decoration-8"
+                    >tatuaje?</span
+                >
+            </h1>
+            <h1
+                class="text-5xl md:text-7xl font-bold absolute text-swap-2 opacity-0 text-custom-oscuro dark:text-custom-beige-light w-full"
+            >
+                Recupera tu <span class="text-custom-piel">confianza.</span>
+            </h1>
+        </div>
+
+        <div
+            class="h-8 md:h-20 w-full flex justify-center subtext opacity-0 translate-y-4"
+        >
+            <Image
+                src={SkinIcon}
+                alt="Lumina Icon"
+                class="w-8 h-8 md:w-20 md:h-20 block dark:hidden"
+            />
+            <Image
+                src={BeigeIcon}
+                alt="Lumina Icon"
+                class="w-8 h-8 md:w-20 md:h-20 hidden dark:block"
+            />
+        </div>
+
+        <div
+            class="flex flex-col subtext gap-6 opacity-0 translate-y-4 justify-end"
+        >
+            <a
+                href="#servicios"
+                class="group relative inline-flex items-center justify-center rounded-full px-5 py-2.5 font-medium transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-custom-piel/50
+                bg-custom-piel/10 text-custom-piel hover:bg-custom-piel/20 dark:bg-custom-beige/10 dark:text-custom-beige dark:hover:bg-custom-beige/20"
+            >
+                <span>Conoce todos nuestros servicios</span>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    import gsap from "gsap";
+
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    tl.fromTo(
+        ".ink-overlay",
+        { clipPath: "circle(150% at 50% 50%)", opacity: 1 },
+        {
+            clipPath: "circle(0% at 50% 50%)",
+            opacity: 0,
+            duration: 2.5,
+            ease: "power2.inOut",
+        },
+        "+=0.2",
+    )
+        .to(".media-container", { scale: 1, duration: 3 }, "<")
+
+        .from(".text-swap-1", { y: 20, opacity: 0, duration: 0.8 }, "-=1.5")
+        .to(".text-swap-1", { y: -20, opacity: 0, duration: 0.6, delay: 0.8 })
+        .to(".text-swap-2", { y: 0, opacity: 1, duration: 0.8 }, "<0.2")
+
+        .to(
+            ".subtext",
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.15,
+            },
+            "-=0.4",
+        );
+</script>

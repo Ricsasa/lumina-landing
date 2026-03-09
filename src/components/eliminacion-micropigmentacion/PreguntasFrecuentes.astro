@@ -1,0 +1,65 @@
+---
+import Accordion from "../common/Accordion.astro";
+
+const items = [
+    {
+        title: "¿Duele?",
+        description:
+            "El punto exacto en el que un estímulo se vuelve doloroso puede variar debido a la tolerancia de cada persona, la sensación puede compararse con pequeños pinchazos o el golpe de una liga sobre la piel. Puede resultar molesto, pero es una sensación tolerable que va disminuyendo a medida de que van avanzando las sesiones. Además, utilizamos métodos de enfriamiento y anestesia tópica para hacer el procedimiento más cómodo para ti.",
+    },
+    {
+        title: "¿Qué tipo de protección utilizan en sesiones de delineado de ojos?",
+        description:
+            "La seguridad de nuestros pacientes es nuestra prioridad. Durante la eliminación de delineado en párpados utilizamos un protector intraocular de titanio, el cual se coloca cuidadosamente antes de iniciar el procedimiento para proteger el globo ocular. Este proceso puede generar una ligera sensación de incomodidad, pero no es doloroso, gracias a esta protección, podemos trabajar de forma segura y precisa sobre el párpado, cuidando en todo momento la salud de tus ojos.",
+    },
+    {
+        title: "¿Puedo eliminar el delineado en una sola sesión?",
+        description:
+            "La eliminación de pigmentos para micropigmentación suele ser mucho más rápida que las tintas para tatuajes, sin embargo es un proceso progresivo. Cada sesión fragmenta parte de la tinta y el cuerpo la elimina gradualmente, por lo que se requieren varias sesiones para lograr resultados visibles y seguros.",
+    },
+    {
+        title: "¿Cuántas sesiones necesito para eliminar mi delineado por completo?",
+        description:
+            "Depende de factores como tipo de pigmento, cantidad de retoques, cantidad de correcciones, antigüedad del tatuaje y tipo de piel. En promedio, se requieren entre 3 y 5 sesiones.",
+    },
+    {
+        title: "¿Cuánto tiempo debe pasar entre sesiones?",
+        description:
+            "Se recomienda esperar entre 4 y 5 semanas entre cada sesión. Este tiempo permite que la piel se recupere adecuadamente y que el cuerpo elimine las partículas de tinta tratadas.",
+    },
+    {
+        title: "¿Qué cuidados debo tener durante mi tratamiento?",
+        description: [
+            "Evitar la exposición directa al sol y usar protector solar.",
+            "No rascar la zona",
+            "Mantener la zona limpia e hidratada",
+            "Evitar albercas, saunas o ejercicio intenso durante los primeros días",
+            "Puedes utilizar maquillaje a partir del día dos.",
+        ],
+    },
+    {
+        title: "¿Cuánto tardan las sesiones?",
+        description:
+            "La duración de las sesiones oscila entre 20 y 30 minutos, La primera cita suele durar entre 15 y 20 minutos adicionales, ya que realizamos la apertura de tu expediente y registramos tu historial en nuestro sistema. Durante esta valoración inicial podremos darte una estimación más precisa sobre la duración y número de sesiones necesarias para tu tratamiento.",
+    },
+];
+---
+
+<section
+    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    id="preguntas-frecuentes"
+>
+    <div class="mx-auto max-w-3xl text-center mb-12">
+        <h2
+            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+        >
+            Preguntas frecuentes
+        </h2>
+        <p
+            class="mt-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light px-4"
+        >
+            Responde a tus dudas sobre la eliminación de micropigmentación.
+        </p>
+    </div>
+    <Accordion items={items} />
+</section>

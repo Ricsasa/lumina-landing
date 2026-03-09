@@ -1,0 +1,58 @@
+---
+import ImageParagraph from "../common/ImageParagraph.astro";
+
+import Equipo from "../../assets/services/tattoos/equipo.avif";
+import Tratamiento from "../../assets/services/tattoos/tratamiento.avif";
+---
+
+<section
+    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    id="como-funciona"
+>
+    <div class="mx-auto max-w-3xl text-center mb-12">
+        <h2
+            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+        >
+            ¿Cómo funciona la eliminación de tatuajes?
+        </h2>
+        <p
+            class="mt-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light px-4"
+        >
+            Prepara tu piel para un nuevo inicio.
+        </p>
+    </div>
+
+    <div class="w-full max-w-5xl mx-auto px-4 flex flex-col gap-16 md:gap-24">
+        <ImageParagraph
+            position="left"
+            title="Tecnología avanzada y segura"
+            imageSrc={Equipo.src}
+            imageAlt="Equipo de eliminación de tatuajes"
+        >
+            <p
+                class="text-base md:text-lg text-custom-piel/80 dark:text-custom-beige/80 font-light leading-relaxed text-justify"
+            >
+                La eliminación de tatuajes con láser de picosegundos es un
+                tratamiento avanzado que utiliza pulsos de energía ultracortos
+                para fragmentar la tinta del tatuaje en partículas
+                microscópicas.
+            </p>
+        </ImageParagraph>
+
+        <ImageParagraph
+            position="right"
+            imageSrc={Tratamiento.src}
+            imageAlt="Tratamiento de eliminación de tatuajes"
+        >
+            <p
+                class="text-base md:text-lg text-custom-piel/80 dark:text-custom-beige/80 font-light leading-relaxed text-justify"
+            >
+                Estas partículas son eliminadas de forma natural por el sistema
+                linfático, permitiendo aclarar o borrar el tatuaje
+                progresivamente, con menos sesiones, mayor eficacia en colores
+                difíciles y menor daño a la piel en comparación con otros
+                láseres.
+            </p>
+        </ImageParagraph>
+    </div>
+</section>

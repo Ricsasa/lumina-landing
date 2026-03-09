@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+
+import Layout from "../layouts/Layout.astro";
+
+import Body from "../components/Body.astro";
+
+import Hero from "../components/index/Hero.astro";
+import Services from "../components/index/Services.jsx";
+import Reviews from "../components/index/Reviews.jsx";
+import Location from "../components/index/Location.astro";
+---
+
+<Layout>
+    <Body>
+        <Hero />
+        <Services client:load />
+        <Reviews client:only="react" />
+        <Location />
+    </Body>
+</Layout>

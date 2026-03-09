@@ -1,0 +1,39 @@
+---
+import PriceCard from "../common/PriceCard.astro";
+---
+
+<section
+    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    id="costos"
+>
+    <!-- Section Header -->
+    <div class="mx-auto max-w-3xl text-center mb-12">
+        <h2
+            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+        >
+            ¿Cuánto cuesta?
+        </h2>
+        <p
+            class="mt-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light px-4"
+        >
+            Conoce nuestros precios y paquetes.
+        </p>
+    </div>
+
+    <!-- Cards Container -->
+    <div
+        class="w-[calc(100vw-2em)] max-w-5xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8"
+    >
+        <PriceCard
+            title="Tatuajes Pequeños"
+            description="Ideal para tatuajes de hasta 5x5 cm."
+            price="$X,XXX"
+        />
+
+        <PriceCard
+            title="Tatuajes Medianos"
+            description="Para tatuajes de hasta 10x10 cm."
+            price="$X,XXX"
+        />
+    </div>
+</section>

@@ -1,0 +1,60 @@
+---
+import Accordion from "../common/Accordion.astro";
+
+const items = [
+    {
+        title: "¿Duele?",
+        description:
+            "El punto exacto en el que un estímulo se vuelve doloroso puede variar debido a la tolerancia de cada persona, la sensación puede compararse con pequeños pinchazos o el golpe de una liga sobre la piel. Puede resultar molesto, pero es una sensación tolerable que va disminuyendo a medida de que van avanzando las sesiones. Además, utilizamos métodos de enfriamiento y anestesia tópica para hacer el procedimiento más cómodo para ti.",
+    },
+    {
+        title: "¿Puedo eliminar un tatuaje en una sola sesión?",
+        description:
+            "No. La eliminación de tatuajes es un proceso progresivo. Cada sesión fragmenta parte de la tinta y el cuerpo la elimina gradualmente, por lo que se requieren varias sesiones para lograr resultados visibles y seguros.",
+    },
+    {
+        title: "¿Cuántas sesiones necesito para eliminar mi tatuaje por completo?",
+        description:
+            "Depende de factores como el tamaño, colores, profundidad de la tinta, antigüedad del tatuaje y tipo de piel. En promedio, se requieren entre 6 y 12 sesiones, aunque algunos tatuajes pueden necesitar más o menos.",
+    },
+    {
+        title: "¿Cuánto tiempo debe pasar entre sesiones?",
+        description:
+            "Se recomienda esperar entre 4 y 5 semanas entre cada sesión. Este tiempo permite que la piel se recupere adecuadamente y que el cuerpo elimine las partículas de tinta tratadas.",
+    },
+    {
+        title: "¿Qué cuidados debo tener durante mi tratamiento?",
+        description: [
+            "Evitar la exposición directa al sol y usar protector solar.",
+            "No rascar la zona",
+            "Mantener la zona limpia e hidratada",
+            "Evitar albercas, saunas o ejercicio intenso durante los primeros días",
+            "Seguir siempre las recomendaciones post-tratamiento para favorecer una correcta recuperación",
+        ],
+    },
+    {
+        title: "¿Cuanto tardan las sesiones?",
+        description:
+            "La duración de las sesiones varía dependiendo del tamaño de tu tatuaje, la primera cita suele durar de 15 a 20 minutos extra porque abrimos tu expediente e historial en nuestro sistema, ese día tendremos una idea más clara de cuanto durarán tus sesiones.",
+    },
+];
+---
+
+<section
+    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 px-2 w-full"
+    id="preguntas-frecuentes"
+>
+    <div class="mx-auto max-w-3xl text-center mb-12">
+        <h2
+            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+        >
+            Preguntas frecuentes
+        </h2>
+        <p
+            class="mt-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light px-4"
+        >
+            Responde a tus dudas sobre la eliminación de tatuajes.
+        </p>
+    </div>
+    <Accordion items={items} />
+</section>

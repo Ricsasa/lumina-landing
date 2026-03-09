@@ -1,0 +1,51 @@
+---
+interface Props {
+    position?: "left" | "right";
+    imageSrc?: string | any;
+    imageAlt?: string;
+    title?: string;
+}
+
+const { position = "left", imageSrc, imageAlt = "", title } = Astro.props;
+
+const isLeft = position === "left";
+const textOrder = isLeft ? "order-1 md:order-2" : "order-1 md:order-1";
+const imageOrder = isLeft ? "order-2 md:order-1" : "order-2 md:order-2";
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+    <div class={`flex flex-col justify-center ${textOrder}`}>
+        {
+            title && (
+                <h3 class="text-2xl md:text-3xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira mb-4">
+                    {title}
+                </h3>
+            )
+        }
+        <slot />
+    </div>
+
+    <div class={`w-full ${imageOrder}`}>
+        <div
+            class="relative w-full aspect-square md:aspect-4/3 rounded-2xl md:rounded-[32px] overflow-hidden shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 bg-custom-beige-light dark:bg-custom-oscuro transition-all duration-300 hover:border-custom-piel/20 hover:dark:border-custom-beige/40 flex items-center justify-center"
+        >
+            {
+                imageSrc ? (
+                    <img
+                        src={
+                            typeof imageSrc === "string"
+                                ? imageSrc
+                                : imageSrc?.src
+                        }
+                        alt={imageAlt}
+                        class="w-full h-full object-cover"
+                    />
+                ) : (
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/5 dark:bg-white/5 font-fira tracking-wider text-sm text-custom-piel/50 dark:text-custom-beige/50">
+                        <img src="" alt="" />
+                    </div>
+                )
+            }
+        </div>
+    </div>
+</div>

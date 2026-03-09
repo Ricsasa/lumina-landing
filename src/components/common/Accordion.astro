@@ -1,0 +1,60 @@
+---
+interface Props {
+    items: {
+        title: string;
+        description: string | string[];
+    }[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="w-full max-w-3xl mx-auto flex flex-col gap-4">
+    {
+        items.map((item) => (
+            <details class="group rounded-2xl md:rounded-[32px] bg-custom-beige-light dark:bg-custom-oscuro shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 hover:dark:border-custom-beige/40 transition-colors duration-300 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between gap-4 p-6 md:p-8 cursor-pointer select-none">
+                    <h3 class="text-md md:text-lg font-medium text-custom-piel dark:text-custom-beige font-fira">
+                        {item.title}
+                    </h3>
+
+                    <div class="relative shrink-0 flex items-center justify-center p-2 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 group-hover:bg-custom-piel/10 dark:group-hover:bg-custom-beige/10 group-open:bg-custom-piel/10 dark:group-open:bg-custom-beige/10 transition-colors duration-300">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            class="w-5 h-5 text-custom-piel dark:text-custom-beige transition-transform duration-300 ease-in-out group-open:rotate-45"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                        </svg>
+                    </div>
+                </summary>
+
+                <div class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-sm md:text-base text-custom-piel/80 dark:text-custom-beige/80 font-light leading-relaxed">
+                    {typeof item.description === "string" ? (
+                        <p class="text-justify">{item.description}</p>
+                    ) : (
+                        <ul class="list-disc pl-6 space-y-2">
+                            {item.description.map((line) => (
+                                <li>{line}</li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
+            </details>
+        ))
+    }
+</div>
+
+<style>
+    /* Ensure summary list-style looks clean across all browsers */
+    details > summary {
+        list-style: none;
+    }
+</style>

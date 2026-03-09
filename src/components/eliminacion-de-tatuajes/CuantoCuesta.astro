@@ -1,0 +1,52 @@
+---
+import PricingCalculator from "./PricingCalculator.jsx";
+
+import ManosDark from "../../assets/services/tattoos/manos_dark.png";
+import ManosLight from "../../assets/services/tattoos/manos_light.png";
+import { Image } from "astro:assets";
+---
+
+<section
+    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    id="costos"
+>
+    <!-- Section Header -->
+    <div class="mx-auto max-w-3xl text-center mb-12">
+        <h2
+            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+        >
+            ¿Cuánto cuesta?
+        </h2>
+        <p
+            class="mt-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light px-4"
+        >
+            Conoce nuestros precios y paquetes.
+        </p>
+    </div>
+
+    <!-- Pricing Tool -->
+    <PricingCalculator client:load />
+
+    <div class="mx-auto max-w-3xl text-center">
+        <p
+            class="my-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light px-4"
+        >
+            ¿No sabes cuanto mide tu tatuaje? Usa esta guia visual para estimar
+            el tamaño.
+        </p>
+        <div
+            class="flex items-start gap-4 p-6 shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 transition-colors duration-300 rounded-[24px] mb-8"
+        >
+            <Image
+                src={ManosDark}
+                alt="Guia visual de tamaños de tatuajes"
+                class="hidden dark:block"
+            />
+            <Image
+                src={ManosLight}
+                alt="Guia visual de tamaños de tatuajes"
+                class="block dark:hidden"
+            />
+        </div>
+    </div>
+</section>

@@ -1,0 +1,56 @@
+---
+import ImageParagraph from "../common/ImageParagraph.astro";
+
+import Tratamiento from "../../assets/services/hollywood-peel/tratamiento.avif";
+import Equipo from "../../assets/services/hollywood-peel/equipo.avif";
+---
+
+<section
+    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    id="como-funciona"
+>
+    <div class="mx-auto max-w-3xl text-center mb-12">
+        <h2
+            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+        >
+            ¿Cómo funciona el Hollywood Peel?
+        </h2>
+        <p
+            class="mt-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light px-4"
+        >
+            Ilumina tu rostro.
+        </p>
+    </div>
+
+    <div class="w-full max-w-5xl mx-auto px-4 flex flex-col gap-16 md:gap-24">
+        <ImageParagraph
+            position="left"
+            imageSrc={Tratamiento.src}
+            imageAlt="Tratamiento de Hollywood Peel"
+        >
+            <p
+                class="text-base md:text-lg text-custom-piel/80 dark:text-custom-beige/80 font-light leading-relaxed text-justify"
+            >
+                El Hollywood Peel es un tratamiento facial que combina una
+                mascarilla de carbón activado con la tecnología láser de
+                picosegundos. El carbón penetra en los poros y el láser actúa
+                sobre él, eliminando impurezas, células muertas y exceso de
+                grasa mientras estimula la producción de colágeno
+            </p>
+        </ImageParagraph>
+
+        <ImageParagraph
+            position="right"
+            imageSrc={Equipo.src}
+            imageAlt="Equipo de Hollywood Peel"
+        >
+            <p
+                class="text-base md:text-lg text-custom-piel/80 dark:text-custom-beige/80 font-light leading-relaxed text-justify"
+            >
+                Esto ayuda a mejorar la textura de la piel, reducir poros
+                visibles, controlar el acné y aportar mayor luminosidad al
+                rostro sin dañar la piel.
+            </p>
+        </ImageParagraph>
+    </div>
+</section>

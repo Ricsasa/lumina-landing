@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+
+import Layout from "../layouts/Layout.astro";
+
+import Body from "../components/Body.astro";
+
+import InnerMenu from "../components/common/InnerMenu.astro";
+
+import {
+    CurrencyDollarIcon,
+    PencilIcon,
+    PhotoIcon,
+    QuestionMarkCircleIcon,
+} from "@heroicons/react/24/outline";
+
+import ComoFunciona from "../components/eliminacion-de-tatuajes/ComoFunciona.astro";
+
+import Costos from "../components/eliminacion-de-tatuajes/CuantoCuesta.astro";
+
+import Galeria from "../components/eliminacion-de-tatuajes/Galeria.jsx";
+
+import PreguntasFrecuentes from "../components/eliminacion-de-tatuajes/PreguntasFrecuentes.astro";
+import Reviews from "../components/index/Reviews";
+
+const menuItems = [
+    {
+        title: "¿Cómo funciona?",
+        icon: PencilIcon,
+        href: "#como-funciona",
+    },
+    {
+        title: "¿Cuánto cuesta?",
+        icon: CurrencyDollarIcon,
+        href: "#costos",
+    },
+    {
+        title: "Galeria",
+        icon: PhotoIcon,
+        href: "#galeria",
+    },
+    {
+        title: "Preguntas frecuentes",
+        icon: QuestionMarkCircleIcon,
+        href: "#preguntas-frecuentes",
+    },
+];
+---
+
+<Layout>
+    <Body>
+        <InnerMenu title="Eliminación de tatuajes" menuItems={menuItems} />
+        <ComoFunciona />
+        <Costos />
+        <Galeria client:only="react" />
+        <PreguntasFrecuentes />
+    </Body>
+</Layout>

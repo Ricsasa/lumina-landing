@@ -1,0 +1,57 @@
+---
+import Accordion from "../common/Accordion.astro";
+
+const items = [
+    {
+        title: "¿Duele?",
+        description:
+            "El procedimiento puede generar una ligera molestia o sensación de vibración sobre la piel, pero es bien tolerado. Utilizamos anestesia tópica para hacer la sesión más cómoda para ti. ",
+    },
+    {
+        title: "¿Puedo ver resultados en una sola sesión?",
+        description:
+            "Sí, desde la primera sesión la piel puede verse más luminosa y uniforme. Sin embargo, los resultados más notorios aparecen progresivamente conforme la piel produce nuevo colágeno durante las semanas posteriores.",
+    },
+    {
+        title: "¿Cuántas sesiones necesito?",
+        description:
+            "Depende del objetivo del tratamiento y las condiciones de la piel. En promedio, se recomiendan entre 3 y 6 sesiones para obtener resultados visibles y duraderos.",
+    },
+    {
+        title: "¿Cuánto tiempo debe pasar entre sesiones?",
+        description:
+            "Se recomienda un intervalo de 4 a 6 semanas entre sesiones para permitir la regeneración completa de la piel y maximizar los beneficios del tratamiento.",
+    },
+    {
+        title: "¿Qué cuidados debo tener durante mi tratamiento?",
+        description: [
+            "No aplicar productos una vez termine la sesión. ",
+            "Utilizar los productos recomendados durante los primeros días. ",
+            "Usar protector solar diariamente, una vez hayan pasado 48 horas de tu tratamiento. ",
+            "Evitar exposición solar directa los primeros días.",
+            "No aplicar maquillaje durante los primeros dos días. ",
+            "Evitar exfoliantes, ácidos o productos irritantes temporalmente.",
+            "Mantener la piel limpia e hidratada. ",
+        ],
+    },
+];
+---
+
+<section
+    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    id="preguntas-frecuentes"
+>
+    <div class="mx-auto max-w-3xl text-center mb-12">
+        <h2
+            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+        >
+            Preguntas frecuentes
+        </h2>
+        <p
+            class="mt-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light px-4"
+        >
+            Responde a tus dudas sobre el microneedling.
+        </p>
+    </div>
+    <Accordion items={items} />
+</section>

@@ -1,0 +1,55 @@
+---
+import Accordion from "../common/Accordion.astro";
+
+const items = [
+    {
+        title: "¿Duele?",
+        description:
+            " No es un tratamiento doloroso. La mayoría de las personas sienten únicamente calor ligero o pequeños chasquidos sobre la piel. Es un procedimiento cómodo y bien tolerado, sin necesidad de anestesia.",
+    },
+    {
+        title: "¿Puedo ver resultados en una sola sesión?",
+        description:
+            " Sí, desde la primera sesión es posible notar la piel más luminosa, suave y limpia. Sin embargo, los mejores resultados se obtienen con varias sesiones consecutivas, ya que el efecto es acumulativo.",
+    },
+    {
+        title: "¿Cuántas sesiones necesito para mejores resultados?",
+        description:
+            "Depende de las necesidades de tu piel, pero generalmente se recomiendan entre 4 y 6 sesiones para mejorar textura, poros, acné y calidad general de la piel",
+    },
+    {
+        title: "¿Cuánto tiempo debe pasar entre sesiones?",
+        description:
+            "Se recomienda realizar las sesiones cada 3 a 4 semanas, permitiendo que la piel se regenere y se potencie la producción de colágeno.",
+    },
+    {
+        title: "¿Qué cuidados debo tener durante mi tratamiento?",
+        description: [
+            "Usar protector solar diariamente.",
+            "Evitar exposición solar directa las primeras 48 horas.",
+            "Mantener la piel hidratada.",
+            "Evitar exfoliantes o productos irritantes durante algunos días.",
+            "Seguir las recomendaciones profesionales para prolongar los resultados.",
+        ],
+    },
+];
+---
+
+<section
+    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    id="preguntas-frecuentes"
+>
+    <div class="mx-auto max-w-3xl text-center mb-12">
+        <h2
+            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+        >
+            Preguntas frecuentes
+        </h2>
+        <p
+            class="mt-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light px-4"
+        >
+            Responde a tus dudas sobre el tratamiento de Hollywood Peel.
+        </p>
+    </div>
+    <Accordion items={items} />
+</section>

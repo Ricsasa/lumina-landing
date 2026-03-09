@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url('/fonts/FiraSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url('/fonts/NeueMachina-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-custom-oscuro: #1e1d1c;
+  --color-custom-piel: #aa8c7c;
+  --color-custom-gris: #86858a;
+  --color-custom-beige: #e1dacc;
+
+  --color-custom-beige-light: #f9f8f5;
+
+  --color-custom-whatsapp-green: #25d366;
+
+  --font-fira: 'FiraSans', sans-serif;
+  --font-neue: 'NeueMachina', sans-serif;
+
+  --spacing-8xl: 90rem;
+  --spacing-9xl: 100rem;
+}
+
+[data-theme="dark"] li:not(.menu-title, .menu-disabled)> :not(ul, .menu-title, .collapse, .accordion-content, .btn).menu-active {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+}
+
+[data-theme="black"] li:not(.menu-title, .menu-disabled)> :not(ul, .menu-title, .collapse, .accordion-content, .btn).menu-active {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+}
+
+[data-theme="luxury"] li:not(.menu-title, .menu-disabled)> :not(ul, .menu-title, .collapse, .accordion-content, .btn).menu-active {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+}
+
+@plugin "@iconify/tailwind4";

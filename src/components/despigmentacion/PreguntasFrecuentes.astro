@@ -1,0 +1,55 @@
+---
+import Accordion from "../common/Accordion.astro";
+
+const items = [
+    {
+        title: "¿Duele?",
+        description:
+            "La sensación suele describirse como pequeños chasquidos o calor ligero sobre la piel. Es un procedimiento bien tolerado y rápido, y se utilizan métodos de enfriamiento y anestesia tópica para mayor comodidad durante la sesión.",
+    },
+    {
+        title: "¿Puedo eliminar una mancha en una sola sesión?",
+        description:
+            "En algunos casos puede observarse una mejoría desde la primera sesión, pero generalmente la despigmentación es progresiva. El tratamiento se realiza de forma gradual para cuidar la piel y evitar irritaciones o rebotes de pigmentación.",
+    },
+    {
+        title: "¿Cuántas sesiones necesito para eliminar la hiperpigmentación por completo?",
+        description:
+            "El número de sesiones depende del tipo de mancha, profundidad del pigmento, causas hormonales y respuesta individual de la piel. En promedio, se recomiendan entre 3 y 6 sesiones para lograr resultados visibles y uniformes.",
+    },
+    {
+        title: "¿Cuánto tiempo debe pasar entre sesiones?",
+        description:
+            "Se recomienda un intervalo de 4 a 5 semanas entre sesiones para permitir la regeneración de la piel y la eliminación natural del pigmento tratado.",
+    },
+    {
+        title: "¿Qué cuidados debo tener durante mi tratamiento?",
+        description: [
+            "Evitar la exposición solar directa y usar protector solar diariamente.",
+            "No exfoliar ni irritar la zona tratada durante los primeros días.",
+            "Evitar el uso de ácidos o tratamientos muy fuertes durante los primeros días del tratamiento.",
+            "Mantener la piel hidratada y limpia.",
+            "Evitar calor intenso, saunas o ejercicio fuerte las primeras 24–48 horas.",
+        ],
+    },
+];
+---
+
+<section
+    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    id="preguntas-frecuentes"
+>
+    <div class="mx-auto max-w-3xl text-center mb-12">
+        <h2
+            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+        >
+            Preguntas frecuentes
+        </h2>
+        <p
+            class="mt-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light px-4"
+        >
+            Responde a tus dudas sobre la despigmentación facial y corporal.
+        </p>
+    </div>
+    <Accordion items={items} />
+</section>

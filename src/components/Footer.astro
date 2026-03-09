@@ -1,0 +1,97 @@
+---
+import VerticalSkinLogo from "../assets/branding/vertical-skin-logo.svg";
+
+import FacebookSvg from "../assets/external/facebook.svg";
+import InstagramSvg from "../assets/external/instagram.svg";
+import TiktokSvg from "../assets/external/tiktok.svg";
+
+const year = new Date().getFullYear();
+---
+
+<footer
+    class="bg-custom-beige-light dark:bg-custom-oscuro border-t border-custom-piel/10 dark:border-custom-beige/10"
+>
+    <div class="mx-auto w-full max-w-7xl px-6 md:px-12 py-12 lg:py-16">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center md:items-start gap-12"
+        >
+            <!-- Branding Section -->
+            <div class="flex flex-col items-center md:items-start">
+                <a
+                    href="/"
+                    class="block transition-transform duration-300 hover:scale-105"
+                >
+                    <VerticalSkinLogo
+                        width={140}
+                        class="text-custom-piel dark:text-custom-beige"
+                    />
+                </a>
+            </div>
+
+            <!-- Social & Copy Section -->
+            <div class="flex flex-col items-center md:items-end gap-6">
+                <!-- Social Links -->
+                <div class="flex items-center gap-6">
+                    <a
+                        href="https://www.instagram.com/luminaestudio.gdl/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="p-3 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group"
+                        aria-label="Instagram"
+                    >
+                        <InstagramSvg
+                            width={24}
+                            height={24}
+                            class="fill-custom-piel dark:fill-custom-beige transition-transform duration-300 group-hover:scale-110"
+                        />
+                    </a>
+                    <a
+                        href="https://www.tiktok.com/@lumina.estudio.ls"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="p-3 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group"
+                        aria-label="TikTok"
+                    >
+                        <TiktokSvg
+                            width={24}
+                            height={24}
+                            class="fill-custom-piel dark:fill-custom-beige transition-transform duration-300 group-hover:scale-110"
+                        />
+                    </a>
+                    <a
+                        href="https://www.facebook.com/luminaEstudioLasergdl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="p-3 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group"
+                        aria-label="Facebook"
+                    >
+                        <FacebookSvg
+                            width={24}
+                            height={24}
+                            class="fill-custom-piel dark:fill-custom-beige transition-transform duration-300 group-hover:scale-110"
+                        />
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center md:text-right mt-2">
+                    <span
+                        class="block text-sm font-light tracking-wide text-custom-piel/70 dark:text-custom-beige/70"
+                    >
+                        &copy; {year}
+                        <a
+                            href="https://luminaestudiolaser.com/"
+                            class="font-medium hover:text-custom-piel dark:hover:text-custom-beige hover:underline transition-colors duration-300 ml-1"
+                            >Lumina Estudio Láser GDL</a
+                        >.
+                    </span>
+                    <span
+                        class="block text-xs font-light text-custom-piel/50 dark:text-custom-beige/50 mt-1"
+                    >
+                        Todos los derechos reservados.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

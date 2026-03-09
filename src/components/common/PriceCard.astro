@@ -1,0 +1,52 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    price: string;
+    pricePrefix?: string;
+}
+
+const { title, description, price, pricePrefix = "Desde" } = Astro.props;
+
+const baseCardClasses =
+    "flex flex-col w-full sm:w-[350px] p-4 md:p-6 lg:p-8 bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] transition-all duration-300";
+const normalCardClasses =
+    "shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 hover:shadow-md";
+const cardClasses = `${baseCardClasses} ${normalCardClasses}`;
+---
+
+<div class={cardClasses}>
+    <div
+        class="flex items-start gap-4 p-6 bg-custom-piel/5 dark:bg-custom-beige/5 rounded-[24px] mb-8"
+    >
+        <div>
+            <h3
+                class="text-xl font-medium text-custom-piel dark:text-custom-beige mb-2 font-fira"
+            >
+                {title}
+            </h3>
+            <p
+                class="text-sm md:text-base text-custom-piel/80 dark:text-custom-beige/80 font-light leading-relaxed"
+            >
+                {description}
+            </p>
+        </div>
+    </div>
+
+    <div class="mt-auto flex justify-between items-center">
+        <div>
+            {
+                pricePrefix && (
+                    <span class="text-sm font-light text-custom-piel/60 dark:text-custom-beige/60">
+                        {pricePrefix}
+                    </span>
+                )
+            }
+            <p
+                class="text-3xl font-medium text-custom-piel dark:text-custom-beige font-fira"
+            >
+                {price}
+            </p>
+        </div>
+    </div>
+</div>

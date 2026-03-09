@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+
+import WhatsappWhite from "../assets/external/whatsapp-white.svg";
+---
+
+<div class="fixed bottom-8 right-2 md:right-8 z-90">
+    <button
+        class="bg-custom-whatsapp-green text-custom-pink p-4 font-bold rounded-2xl shadow-lg"
+    >
+        <a
+            href="https://wa.me/523314884042?text=%C2%A1Hola!%20He%20visto%20su%20pagina%20web,%20y%20quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n!"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <Image width="30" src={WhatsappWhite} alt="Whatsapp green Logo" />
+        </a>
+    </button>
+</div>

@@ -1,0 +1,57 @@
+---
+import "../styles/global.css";
+
+import Layout from "../layouts/Layout.astro";
+
+import Body from "../components/Body.astro";
+
+import InnerMenu from "../components/common/InnerMenu.astro";
+
+import {
+    CurrencyDollarIcon,
+    PencilIcon,
+    PhotoIcon,
+    QuestionMarkCircleIcon,
+} from "@heroicons/react/24/outline";
+
+import ComoFunciona from "../components/hollywood-peel/ComoFunciona.astro";
+
+import Costos from "../components/hollywood-peel/CuantoCuesta.astro";
+
+import Galeria from "../components/hollywood-peel/Galeria.jsx";
+
+import PreguntasFrecuentes from "../components/hollywood-peel/PreguntasFrecuentes.astro";
+
+const menuItems = [
+    {
+        title: "¿Cómo funciona?",
+        icon: PencilIcon,
+        href: "#como-funciona",
+    },
+    {
+        title: "¿Cuánto cuesta?",
+        icon: CurrencyDollarIcon,
+        href: "#costos",
+    },
+    {
+        title: "Galeria",
+        icon: PhotoIcon,
+        href: "#galeria",
+    },
+    {
+        title: "Preguntas frecuentes",
+        icon: QuestionMarkCircleIcon,
+        href: "#preguntas-frecuentes",
+    },
+];
+---
+
+<Layout>
+    <Body>
+        <InnerMenu title="Hollywood Peel" menuItems={menuItems} />
+        <ComoFunciona />
+        <Costos />
+        <Galeria client:visible />
+        <PreguntasFrecuentes />
+    </Body>
+</Layout>
