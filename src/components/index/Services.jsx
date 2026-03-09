@@ -33,13 +33,13 @@ export default function Services() {
                         title="Eliminación de micropigmentación"
                         image={Eyebrows.src || Eyebrows}
                         className="col-span-6"
-                        href="/lumina-landing/eliminacion-de-micropigmentacion"
+                        href="/lumina-landing/eliminacion-micropigmentacion"
                     />
                     <ServicesCard
                         title="Despigmentación facial y corporal"
                         image={Armpit.src || Armpit}
                         className="col-span-6"
-                        href="/lumina-landing/despigmentacion-facial-y-corporal"
+                        href="/lumina-landing/despigmentacion"
                     />
                     <ServicesCard
                         title="Hollywood Peel"
