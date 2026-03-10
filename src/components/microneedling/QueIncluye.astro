@@ -1,0 +1,58 @@
+---
+import ImageParagraph from "../common/ImageParagraph.astro";
+import Peptona from "../../assets/services/microneedling/peptona.avif";
+import LuzRoja from "../../assets/services/microneedling/luzroja.avif";
+---
+
+<section
+    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    id="que-incluye"
+>
+    <div class="mx-auto max-w-3xl text-center mb-12">
+        <h2
+            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+        >
+            ¿Qué incluye mi sesión?
+        </h2>
+        <p
+            class="mt-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light px-4"
+        >
+            Conoce los beneficios de tu sesión.
+        </p>
+    </div>
+
+    <div class="w-full max-w-5xl mx-auto flex flex-col gap-8">
+        <ImageParagraph position="left" imageSrc={Peptona} imageAlt="Peptona">
+            <p
+                class="text-base md:text-lg text-custom-piel/80 dark:text-custom-beige/80 font-light leading-relaxed text-justify"
+            >
+                En Lumina Estudio Láser GDL utilizamos activos para potenciar
+                los resultados del microneedling. La peptona es un producto
+                despigmentante, reafirmante y tonificante, formulado para dar un
+                efecto tensor inmediato, hidratación y rejuvenecimiento facial,
+                cuello y escote.
+            </p>
+        </ImageParagraph>
+        <ImageParagraph position="right" imageSrc={LuzRoja} imageAlt="Luz Roja">
+            <p
+                class="text-base md:text-lg text-custom-piel/80 dark:text-custom-beige/80 font-light leading-relaxed text-justify"
+            >
+                El microneedling combinado con terapia de luz roja potencia los
+                procesos naturales de regeneración de la piel. Tras el
+                microneedling, la piel inicia un proceso de reparación que
+                estimula la producción de colágeno y la renovación celular.
+                Posteriormente, la terapia de luz roja como la que proporciona
+                ayuda a optimizar este proceso mediante fotobiomodulación,
+                estimulando la actividad celular.
+            </p>
+            <p
+                class="text-base md:text-lg text-custom-piel/80 dark:text-custom-beige/80 font-light leading-relaxed text-justify"
+            >
+                Además, la luz roja tiene un efecto antiinflamatorio, lo que
+                contribuye a reducir el enrojecimiento posterior al tratamiento
+                y favorecer una recuperación más rápida, ayudando a mejorar la
+                textura, luminosidad y calidad general de la piel.
+            </p>
+        </ImageParagraph>
+    </div>
+</section>

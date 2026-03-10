@@ -12,6 +12,7 @@ import {
     PencilIcon,
     PhotoIcon,
     QuestionMarkCircleIcon,
+    SparklesIcon,
 } from "@heroicons/react/24/outline";
 
 import ComoFunciona from "../components/microneedling/ComoFunciona.astro";
@@ -22,11 +23,18 @@ import Galeria from "../components/microneedling/Galeria.jsx";
 
 import PreguntasFrecuentes from "../components/microneedling/PreguntasFrecuentes.astro";
 
+import QueIncluye from "../components/microneedling/QueIncluye.astro";
+
 const menuItems = [
     {
         title: "¿Cómo funciona?",
         icon: PencilIcon,
         href: "/lumina-landing/microneedling/#como-funciona",
+    },
+    {
+        title: "¿Qué incluye mi sesión?",
+        icon: SparklesIcon,
+        href: "/lumina-landing/microneedling/#que-incluye",
     },
     {
         title: "¿Cuánto cuesta?",
@@ -57,6 +65,7 @@ export const seo = {
     <Body>
         <InnerMenu title="Microneedling (Dermapen)" menuItems={menuItems} />
         <ComoFunciona />
+        <QueIncluye />
         <Costos />
         <Galeria client:visible />
         <PreguntasFrecuentes />
