@@ -40,20 +40,20 @@ export default function PricingCalculator() {
 
         if (area < 25) {
             precioStr = "$500.00 - $600.00";
+            setRate(500)
         } else if (area >= 25) {
             const rate = area * 5 + 500
             setRate(rate)
             precioStr = `$${rate.toFixed(2)} - $${(rate + 100).toFixed(2)}`;
         }
 
-
-
         setResultado(precioStr)
+
         setWhatsappMessage(`Hola, me gustaría obtener un presupuesto para la eliminación de tatuajes con las siguientes dimensiones: Altura: ${alto} cm, Ancho: ${ancho} cm, Tipo de tinta: ${tinta}.`)
     };
 
     return (
-        <div className=" max-w-6xl mx-2 md:mx-auto bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] p-6 md:p-10 shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 mb-16 px-4">
+        <div className="max-w-6xl mx-2 md:mx-auto bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] p-6 md:p-10 shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 mb-16 px-4">
             <form onSubmit={calcular} className="flex flex-col gap-6">
                 <div>
                     <h2
@@ -112,7 +112,6 @@ export default function PricingCalculator() {
                     </div>
                 </div>
 
-                {/* Tipo de Tinta Select */}
                 <div className="flex flex-col relative">
                     <label className="text-sm font-medium text-custom-piel/80 dark:text-custom-beige/80 mb-1.5 ml-1">
                         Tipo de Tinta
@@ -134,7 +133,6 @@ export default function PricingCalculator() {
                     </div>
                 </div>
 
-                {/* Confirm Button */}
                 <button
                     type="submit"
                     className="w-full mt-4 py-3.5 rounded-full bg-custom-piel dark:bg-custom-beige text-custom-beige-light dark:text-custom-oscuro font-medium tracking-wide shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.01] active:scale-[0.98]"
@@ -143,8 +141,6 @@ export default function PricingCalculator() {
                 </button>
             </form>
 
-
-            {/* Resultado */}
             {resultado && (
                 <div className="mt-8 pt-6 border-t border-custom-piel/10 dark:border-custom-beige/10 flex flex-col items-center animate-fade-in-up">
                     <span className="text-sm font-light text-custom-piel/70 dark:text-custom-beige/70 mb-2">Costo estimado por sesión</span>

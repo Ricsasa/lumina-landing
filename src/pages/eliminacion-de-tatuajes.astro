@@ -44,9 +44,16 @@ const menuItems = [
         href: "/lumina-landing/eliminacion-de-tatuajes/#preguntas-frecuentes",
     },
 ];
+
+export const prerender = true;
+export const seo = {
+    title: `Eliminación de tatuajes`,
+    description:
+        "Lumina Estudio Laser | Elimina tatuajes con nuestros tratamientos avanzados de eliminación de tatuajes.",
+};
 ---
 
-<Layout>
+<Layout seo={seo}>
     <Body>
         <InnerMenu title="Eliminación de tatuajes" menuItems={menuItems} />
         <ComoFunciona />

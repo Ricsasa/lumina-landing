@@ -44,9 +44,16 @@ const menuItems = [
         href: "/lumina-landing/microneedling/#preguntas-frecuentes",
     },
 ];
+
+export const prerender = true;
+export const seo = {
+    title: `Microneedling (Dermapen)`,
+    description:
+        "Lumina Estudio Laser | Renueva tu piel con Microneedling (Dermapen). Tratamiento profesional para mejorar textura, cicatrices y líneas finas.",
+};
 ---
 
-<Layout>
+<Layout seo={seo}>
     <Body>
         <InnerMenu title="Microneedling (Dermapen)" menuItems={menuItems} />
         <ComoFunciona />

@@ -44,9 +44,16 @@ const menuItems = [
         href: "/lumina-landing/eliminacion-micropigmentacion/#preguntas-frecuentes",
     },
 ];
+
+export const prerender = true;
+export const seo = {
+    title: `Eliminación de micropigmentación`,
+    description:
+        "Lumina Estudio Laser | Elimina micropigmentación con nuestros tratamientos avanzados de eliminación de micropigmentación.",
+};
 ---
 
-<Layout>
+<Layout seo={seo}>
     <Body>
         <InnerMenu
             title="Eliminación de micropigmentación"

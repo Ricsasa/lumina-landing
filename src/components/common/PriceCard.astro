@@ -2,7 +2,7 @@
 interface Props {
     title: string;
     description: string;
-    price: string;
+    price?: string;
     pricePrefix?: string;
 }
 
@@ -46,6 +46,7 @@ const cardClasses = `${baseCardClasses} ${normalCardClasses}`;
                 class="text-3xl font-medium text-custom-piel dark:text-custom-beige font-fira"
             >
                 {price}
+                <slot />
             </p>
         </div>
     </div>

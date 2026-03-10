@@ -5,6 +5,14 @@ import Header from "../components/Header.jsx";
 
 import Whatsapp from "../components/Whatsapp.astro";
 import Footer from "../components/Footer.astro";
+
+const {
+	seo = {
+		title: "Excelencia en tratamientos de cuidado para tu piel.",
+		description:
+			"Lumina Estudio Láser GDL | Tratamientos profesionales de depilación láser, micropigmentación, eliminación de tatuajes y más.",
+	},
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -19,7 +27,9 @@ import Footer from "../components/Footer.astro";
 			href="/lumina-landing/favicon.svg"
 		/>
 		<meta name="generator" content={Astro.generator} />
-		<title>Lumina Estudio Láser GDL</title>
+
+		<title>{seo.title} | Lumina Estudio Láser GDL</title>
+		<meta name="description" content={seo.description} />
 
 		<link rel="sitemap" href="/sitemap-index.xml" />
 	</head>

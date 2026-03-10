@@ -1,12 +1,16 @@
 ---
 import PriceCard from "../common/PriceCard.astro";
+import WhatsappWhite from "../../assets/external/whatsapp-white.svg";
+import { Image } from "astro:assets";
+
+const whatsappMessage =
+    "Hola, estoy interesado en sus servicios de despigmentación.";
 ---
 
 <section
     class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
     id="costos"
 >
-    <!-- Section Header -->
     <div class="mx-auto max-w-3xl text-center mb-12">
         <h2
             class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
@@ -20,20 +24,66 @@ import PriceCard from "../common/PriceCard.astro";
         </p>
     </div>
 
-    <!-- Cards Container -->
     <div
         class="w-[calc(100vw-2em)] max-w-5xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8"
     >
         <PriceCard
-            title="Tatuajes Pequeños"
-            description="Ideal para tatuajes de hasta 5x5 cm."
-            price="$X,XXX"
+            title="Rostro"
+            description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en el rostro."
+            price="$700.00 por sesión"
         />
 
         <PriceCard
-            title="Tatuajes Medianos"
-            description="Para tatuajes de hasta 10x10 cm."
-            price="$X,XXX"
+            title="Axilas"
+            description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en las axilas."
+            price="$700.00 por sesión"
         />
+
+        <PriceCard
+            title="Manos"
+            description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en las manos."
+            price="$700.00 por sesión"
+        />
+    </div>
+
+    <div class="mx-auto max-w-2xl text-center mt-12">
+        <PriceCard
+            title="Paquete de 4 sesiones"
+            description="Aprovecha nuestros paquetes de 4 sesiones y ahorra."
+            pricePrefix=""
+        >
+            <>
+                <span
+                    class="text-custom-piel dark:text-custom-beige line-through"
+                >
+                    $2,800.00
+                </span>&nbsp;
+                <span class="text-custom-piel dark:text-custom-beige">
+                    $2,520.00
+                </span>
+            </>
+        </PriceCard>
+    </div>
+    <div class="mx-auto max-w-3xl text-center mt-12">
+        <p
+            class="text-2xl text-custom-piel dark:text-custom-beige font-light px-4"
+        >
+            ¿Te interesa despigmentar otra parte de tu cuerpo? ¡Contactanos!
+        </p>
+        <div class="max-w-3/4 mx-auto flex items-center justify-center gap-2">
+            <a
+                href={`https://wa.me/523314884042?text=${encodeURIComponent(whatsappMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-6 flex items-center justify-center gap-2 bg-custom-whatsapp-green text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            >
+                <Image
+                    src={WhatsappWhite}
+                    alt="WhatsApp Logo"
+                    class="w-6 h-6"
+                />
+                ¡Obten una cotización personalizada!
+            </a>
+        </div>
     </div>
 </section>

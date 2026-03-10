@@ -44,9 +44,16 @@ const menuItems = [
         href: "/lumina-landing/hollywood-peel/#preguntas-frecuentes",
     },
 ];
+
+export const prerender = true;
+export const seo = {
+    title: `Hollywood Peel`,
+    description:
+        "Lumina Estudio Laser | Elimina manchas y pigmentación no deseada con nuestros tratamientos avanzados de despigmentación.",
+};
 ---
 
-<Layout>
+<Layout seo={seo}>
     <Body>
         <InnerMenu title="Hollywood Peel" menuItems={menuItems} />
         <ComoFunciona />
