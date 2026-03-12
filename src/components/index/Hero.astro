@@ -123,11 +123,17 @@ import HeroBg from "../../assets/hero.avif";
             },
             "-=0.4",
         )
-        .to(
+        .fromTo(
             ".gs-hero-bg",
             {
+                clipPath: "circle(0% at 50% 50%)",
+                opacity: 0,
+            },
+            {
+                clipPath: "circle(150% at 50% 50%)",
                 opacity: 0.15,
-                duration: 2,
+                duration: 2.5,
+                ease: "power2.inOut",
             },
             "-=0.5",
         );
