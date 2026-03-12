@@ -28,6 +28,22 @@ const {
 		<meta name="description" content={seo.description} />
 
 		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<!-- Google tag (gtag.js) -->
+		<script
+			type="text/partytown"
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-Z6TY60XJGS"
+		></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-Z6TY60XJGS");
+		</script>
 	</head>
 	<body class="bg-custom-beige-light dark:bg-custom-oscuro font-neue">
 		<script is:inline>
