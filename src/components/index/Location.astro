@@ -5,6 +5,8 @@ import { MapPinIcon } from "@heroicons/react/24/outline";
 
 import Facilities1 from "../../assets/facilities/facilities-1.avif";
 import Facilities2 from "../../assets/facilities/facilities-2.avif";
+import Facilities3 from "../../assets/facilities/facilities-3.avif";
+import Facilities4 from "../../assets/facilities/facilities-4.avif";
 ---
 
 <section
@@ -34,12 +36,26 @@ import Facilities2 from "../../assets/facilities/facilities-2.avif";
             <Image
                 src={Facilities1}
                 alt={"Interior"}
-                class="gsap-facility-image relative w-full h-auto md:absolute md:top-0 md:left-0 md:h-full object-cover opacity-0"
+                class="gsap-facility-image relative w-full h-auto md:absolute md:top-0 md:left-0 md:h-full object-cover opacity-0 saturate-50"
+                aria-label="Interior"
             />
             <Image
                 src={Facilities2}
+                alt={"Interior"}
+                class="gsap-facility-image relative w-full h-auto md:absolute md:top-0 md:left-0 md:h-full object-cover opacity-0 saturate-50"
+                aria-label="Interior"
+            />
+            <Image
+                src={Facilities3}
                 alt={"Exterior"}
-                class="gsap-facility-image absolute top-0 left-0 w-full h-full object-cover opacity-0"
+                class="gsap-facility-image relative w-full h-auto md:absolute md:top-0 md:left-0 md:h-full object-cover opacity-0 saturate-50"
+                aria-label="Exterior"
+            />
+            <Image
+                src={Facilities4}
+                alt={"Exterior"}
+                class="gsap-facility-image relative w-full h-auto md:absolute md:top-0 md:left-0 md:h-full object-cover opacity-0 saturate-50"
+                aria-label="Exterior"
             />
         </div>
 
