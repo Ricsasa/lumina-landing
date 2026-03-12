@@ -3,11 +3,20 @@
 import { Image } from "astro:assets";
 import SkinIcon from "../../assets/branding/skin-icon.svg";
 import BeigeIcon from "../../assets/branding/beige-icon.svg";
+import HeroBg from "../../assets/hero.avif";
 ---
 
 <section
     class="relative w-full min-h-screen overflow-hidden flex items-center justify-center bg-custom-beige-light dark:bg-custom-oscuro text-custom-oscuro dark:text-custom-beige-light transition-colors duration-500"
 >
+    <div class="absolute inset-0 z-0 opacity-0 gs-hero-bg">
+        <Image
+            src={HeroBg}
+            alt="Fondo"
+            class="w-full h-full object-cover saturate-50"
+        />
+    </div>
+
     <div
         class="absolute inset-0 z-10 bg-custom-oscuro dark:bg-custom-beige-light ink-overlay pointer-events-none"
     >
@@ -113,5 +122,13 @@ import BeigeIcon from "../../assets/branding/beige-icon.svg";
                 stagger: 0.15,
             },
             "-=0.4",
+        )
+        .to(
+            ".gs-hero-bg",
+            {
+                opacity: 0.15,
+                duration: 2,
+            },
+            "-=0.5",
         );
 </script>
