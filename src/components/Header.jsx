@@ -54,7 +54,7 @@ export default function Header() {
                     >
                         <div className="flex shrink-0 items-center">
                             <div className={`w-36 md:w-54`}>
-                                <a href="/lumina-landing" className="block focus:outline-none focus:ring-2 focus:ring-custom-piel/50 rounded-lg">
+                                <a href="/lumina-landing" className="block focus:outline-none focus:ring-2 focus:ring-custom-piel/50 rounded-lg" aria-label="Lumina Estudio Láser">
                                     <VerticalSkinLogo className="text-custom-piel dark:text-custom-beige" alt="Lumina Estudio Láser" />
                                 </a>
                             </div>
