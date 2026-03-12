@@ -27,31 +27,31 @@ export default function Services() {
 
                         image={Tattoo.src || Tattoo}
                         className="col-span-6"
-                        href="/lumina-landing/eliminacion-de-tatuajes"
+                        href="/eliminacion-de-tatuajes"
                     />
                     <ServicesCard
                         title="Eliminación de micropigmentación"
                         image={Eyebrows.src || Eyebrows}
                         className="col-span-6"
-                        href="/lumina-landing/eliminacion-micropigmentacion"
+                        href="/eliminacion-micropigmentacion"
                     />
                     <ServicesCard
                         title="Despigmentación facial y corporal"
                         image={Armpit.src || Armpit}
                         className="col-span-6"
-                        href="/lumina-landing/despigmentacion"
+                        href="/despigmentacion"
                     />
                     <ServicesCard
                         title="Hollywood Peel"
                         image={Hollywood.src || Hollywood}
                         className="col-span-6"
-                        href="/lumina-landing/hollywood-peel"
+                        href="/hollywood-peel"
                     />
                     <ServicesCard
                         title="Microneedling (Dermapen)"
                         image={Dermapen.src || Dermapen}
                         className="col-start-4 col-span-6"
-                        href="/lumina-landing/microneedling"
+                        href="/microneedling"
                     />
                 </div>
             </div>

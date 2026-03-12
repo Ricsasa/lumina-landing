@@ -25,23 +25,23 @@ export default function Header() {
     const navigation = [
         {
             name: 'Eliminación de tatuajes',
-            href: '/lumina-landing/eliminacion-de-tatuajes'
+            href: '/eliminacion-de-tatuajes'
         },
         {
             name: 'Eliminación de micropigmentación',
-            href: '/lumina-landing/eliminacion-micropigmentacion'
+            href: '/eliminacion-micropigmentacion'
         },
         {
             name: 'Despigmentación facial y corporal',
-            href: '/lumina-landing/despigmentacion'
+            href: '/despigmentacion'
         },
         {
             name: 'Hollywood Peel',
-            href: '/lumina-landing/hollywood-peel'
+            href: '/hollywood-peel'
         },
         {
             name: 'Microneedling (Dermapen)',
-            href: '/lumina-landing/microneedling'
+            href: '/microneedling'
         },
     ]
 
@@ -54,7 +54,7 @@ export default function Header() {
                     >
                         <div className="flex shrink-0 items-center">
                             <div className={`w-36 md:w-54`}>
-                                <a href="/lumina-landing" className="block focus:outline-none focus:ring-2 focus:ring-custom-piel/50 rounded-lg" aria-label="Lumina Estudio Láser">
+                                <a href="/" className="block focus:outline-none focus:ring-2 focus:ring-custom-piel/50 rounded-lg" aria-label="Lumina Estudio Láser">
                                     <VerticalSkinLogo className="text-custom-piel dark:text-custom-beige" alt="Lumina Estudio Láser" aria-label="Lumina Estudio Láser" />
                                 </a>
                             </div>
@@ -126,14 +126,14 @@ export default function Header() {
 
                     <nav className="flex flex-col space-y-1">
                         <a
-                            href="/lumina-landing/#reviews"
+                            href="/#reviews"
                             className="px-4 py-2 rounded-2xl text-xl md:text-3xl font-medium tracking-wide text-custom-piel dark:text-custom-beige hover:bg-custom-piel/5 dark:hover:bg-custom-beige/5 transition-colors duration-200"
                             onClick={() => setIsOpen(false)}
                         >
                             Reseñas
                         </a>
                         <a
-                            href="/lumina-landing/#ubicacion"
+                            href="/#ubicacion"
                             className="px-4 py-2 rounded-2xl text-xl md:text-3xl font-medium tracking-wide text-custom-piel dark:text-custom-beige hover:bg-custom-piel/5 dark:hover:bg-custom-beige/5 transition-colors duration-200"
                             onClick={() => setIsOpen(false)}
                         >

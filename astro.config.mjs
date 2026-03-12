@@ -14,7 +14,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss(), svgr()],
   },
-  site: 'https://ricsasa.github.io',
-  base: '/lumina-landing',
+  site: 'https://luminaestudiolaser.com',
+  base: '',
   integrations: [react(), sitemap()],
 });
