@@ -6,9 +6,16 @@ interface Props {
     imageSrc?: string | any;
     imageAlt?: string;
     title?: string;
+    saturate?: boolean;
 }
 
-const { position = "left", imageSrc, imageAlt = "", title } = Astro.props;
+const {
+    position = "left",
+    imageSrc,
+    imageAlt = "",
+    title,
+    saturate = true,
+} = Astro.props;
 
 const isLeft = position === "left";
 const textOrder = isLeft ? "order-1 md:order-2" : "order-1 md:order-1";
@@ -38,7 +45,7 @@ const imageOrder = isLeft ? "order-2 md:order-1" : "order-2 md:order-2";
                         width={typeof imageSrc === "string" ? 800 : undefined}
                         height={typeof imageSrc === "string" ? 800 : undefined}
                         alt={imageAlt}
-                        class="w-full h-full object-cover saturate-60"
+                        class={`w-full h-full object-cover ${saturate ? "saturate-60" : ""}`}
                     />
                 ) : (
                     <div class="absolute inset-0 flex items-center justify-center bg-black/5 dark:bg-white/5 font-fira tracking-wider text-sm text-custom-piel/50 dark:text-custom-beige/50">

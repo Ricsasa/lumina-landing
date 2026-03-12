@@ -4,7 +4,7 @@ import Eyebrows from "../../assets/services/eyebrows.avif";
 import Dermapen from "../../assets/services/dermapen.avif";
 import Hollywood from "../../assets/services/hollywood.avif";
 import Tattoo from "../../assets/services/tattoo.avif";
-import Armpit from "../../assets/services/armpit.avif";
+import Armpit from "../../assets/services/armpit2.avif";
 
 export default function Services() {
     return (

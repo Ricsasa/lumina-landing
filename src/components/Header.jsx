@@ -128,12 +128,14 @@ export default function Header() {
                         <a
                             href="/lumina-landing/#reviews"
                             className="px-4 py-2 rounded-2xl text-xl md:text-3xl font-medium tracking-wide text-custom-piel dark:text-custom-beige hover:bg-custom-piel/5 dark:hover:bg-custom-beige/5 transition-colors duration-200"
+                            onClick={() => setIsOpen(false)}
                         >
                             Reseñas
                         </a>
                         <a
                             href="/lumina-landing/#ubicacion"
                             className="px-4 py-2 rounded-2xl text-xl md:text-3xl font-medium tracking-wide text-custom-piel dark:text-custom-beige hover:bg-custom-piel/5 dark:hover:bg-custom-beige/5 transition-colors duration-200"
+                            onClick={() => setIsOpen(false)}
                         >
                             Nuestra Ubicación
                         </a>
