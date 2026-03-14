@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://luminaestudiolaser.com/sitemap-index.xml

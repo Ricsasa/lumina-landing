@@ -33,11 +33,13 @@ const menuItems = [
         icon: CurrencyDollarIcon,
         href: "/eliminacion-de-tatuajes/#costos",
     },
+    /*
     {
         title: "Galeria",
         icon: PhotoIcon,
         href: "/eliminacion-de-tatuajes/#galeria",
     },
+    */
     {
         title: "Preguntas frecuentes",
         icon: QuestionMarkCircleIcon,
@@ -58,7 +60,7 @@ export const seo = {
         <InnerMenu title="Eliminación de tatuajes" menuItems={menuItems} />
         <ComoFunciona />
         <Costos />
-        <Galeria client:only="react" />
+        <!-- <Galeria client:only="react" /> -->
         <PreguntasFrecuentes />
     </Body>
 </Layout>
