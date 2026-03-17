@@ -62,21 +62,22 @@ const services = [
             {
                 services.map((service) => (
                     <div
-                        class={`flex flex-col w-full max-w-sm md:max-w-none mx-auto overflow-hidden bg-custom-beige-light dark:bg-custom-oscuro rounded-[24px] shadow-sm hover:shadow-md transition-shadow duration-300 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 ${service.className || ""}`}
+                        class={`group flex flex-col w-full max-w-sm md:max-w-none mx-auto overflow-hidden bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] shadow-md hover:shadow-xl transition-all duration-300 border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/30 dark:hover:border-custom-beige/40 ${service.className || ""}`}
                     >
                         <a
                             href={service.href}
                             class="relative block overflow-hidden"
                         >
                             <Image
-                                class="object-cover w-full h-48 sm:h-56 md:h-72 lg:h-88 transition-transform duration-500 hover:scale-105 saturate-60"
+                                class="object-cover w-full h-64 sm:h-80 md:h-86 lg:h-90 transition-transform duration-700 group-hover:scale-105 saturate-60"
                                 src={service.image}
                                 alt={service.title}
                             />
+                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-linear-to-t from-custom-beige-light dark:from-custom-oscuro via-custom-beige-light/60 dark:via-custom-oscuro/60 to-transparent pointer-events-none" />
                         </a>
-                        <div class="flex flex-col grow p-6">
+                        <div class="flex flex-col grow px-6 pb-6 md:px-8 md:pb-8 pt-0 md:pt-0 -mt-10 md:-mt-12 relative z-10">
                             <a href={service.href}>
-                                <h3 class="mb-2 text-xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira">
+                                <h3 class="mb-6 text-2xl md:text-3xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira">
                                     {service.title}
                                 </h3>
                             </a>
@@ -84,7 +85,7 @@ const services = [
                             <div class="mt-auto">
                                 <a
                                     href={service.href}
-                                    class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium tracking-wide transition-colors duration-300 rounded-full bg-custom-piel/10 text-custom-piel hover:bg-custom-piel/20 dark:bg-custom-piel/20 dark:text-custom-beige dark:hover:bg-custom-piel/30 focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
+                                    class="w-full inline-flex items-center justify-center px-6 py-3.5 text-[15px] font-medium tracking-wide transition-colors duration-300 rounded-full bg-custom-piel/10 text-custom-piel hover:bg-custom-piel/20 dark:bg-custom-piel/20 dark:text-custom-beige hover:dark:bg-custom-beige focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                                 >
                                     Saber más
                                     <svg
