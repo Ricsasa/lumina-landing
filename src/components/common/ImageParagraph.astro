@@ -46,6 +46,7 @@ const imageOrder = isLeft ? "order-2 md:order-1" : "order-2 md:order-2";
                         height={typeof imageSrc === "string" ? 800 : undefined}
                         alt={imageAlt}
                         class={`w-full h-full object-cover ${saturate ? "saturate-60" : ""}`}
+                        format="avif"
                     />
                 ) : (
                     <div class="absolute inset-0 flex items-center justify-center bg-black/5 dark:bg-white/5 font-fira tracking-wider text-sm text-custom-piel/50 dark:text-custom-beige/50">

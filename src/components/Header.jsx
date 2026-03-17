@@ -126,6 +126,13 @@ export default function Header() {
 
                     <nav className="flex flex-col space-y-1">
                         <a
+                            href="/#servicios"
+                            className="px-4 py-2 rounded-2xl text-xl md:text-3xl font-medium tracking-wide text-custom-piel dark:text-custom-beige hover:bg-custom-piel/5 dark:hover:bg-custom-beige/5 transition-colors duration-200"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            Nuestros Servicios
+                        </a>
+                        <a
                             href="/#reviews"
                             className="px-4 py-2 rounded-2xl text-xl md:text-3xl font-medium tracking-wide text-custom-piel dark:text-custom-beige hover:bg-custom-piel/5 dark:hover:bg-custom-beige/5 transition-colors duration-200"
                             onClick={() => setIsOpen(false)}

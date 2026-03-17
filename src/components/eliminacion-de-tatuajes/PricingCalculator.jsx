@@ -39,12 +39,12 @@ export default function PricingCalculator() {
         let precioStr = "";
 
         if (area < 25) {
-            precioStr = "$500.00 - $600.00";
+            precioStr = "$500 - $600";
             setRate(500)
         } else if (area >= 25) {
             const rate = area * 5 + 500
             setRate(rate)
-            precioStr = `$${rate.toFixed(2)} - $${(rate + 100).toFixed(2)}`;
+            precioStr = `$${rate} - $${(rate + 100)}`;
         }
 
         setResultado(precioStr)
@@ -148,14 +148,14 @@ export default function PricingCalculator() {
                         {resultado}
                     </p>
                     <div className="flex flex-col gap-2 mt-4 text-center">
-                        <p className="text-2xl md:text-2xl font-medium text-custom-piel dark:text-custom-beige font-fira">
-                            <span className="text-lg font-light text-custom-piel/70 dark:text-custom-beige/70 mb-2">Paquete de 4 sesiones:</span> &nbsp;<span className="line-through">${rate * 4}</span> &nbsp;<span className='font-bold'>${(rate * 4 - (rate * 4 * 0.1)).toFixed(2).toLocaleString()}</span>
+                        <p className="text-2xl md:text-2xl font-medium text-custom-piel dark:text-custom-beige font-fira flex flex-col gap-2 md:flex-row justify-center">
+                            <span className="text-lg font-light text-custom-piel/70 dark:text-custom-beige/70 mb-2">Paquete de 4 sesiones:</span><div><span className="line-through">${rate * 4}</span>&nbsp;&nbsp;<span className='font-bold'>${(rate * 4 - (rate * 4 * 0.1)).toLocaleString()}</span></div>
                         </p>
-                        <p className="text-2xl md:text-2xl font-medium text-custom-piel dark:text-custom-beige font-fira">
-                            <span className="text-lg font-light text-custom-piel/70 dark:text-custom-beige/70 mb-2">Paquete de 8 sesiones:</span> &nbsp;<span className="line-through">${rate * 8}</span> &nbsp;&nbsp;<span className='font-bold'>${(rate * 8 - (rate * 8 * 0.15)).toFixed(2).toLocaleString()}</span>
+                        <p className="text-2xl md:text-2xl font-medium text-custom-piel dark:text-custom-beige font-fira flex flex-col gap-2 md:flex-row justify-center">
+                            <span className="text-lg font-light text-custom-piel/70 dark:text-custom-beige/70 mb-2">Paquete de 8 sesiones:</span><div><span className="line-through">${rate * 8}</span>&nbsp;&nbsp;<span className='font-bold'>${(rate * 8 - (rate * 8 * 0.15)).toLocaleString()}</span></div>
                         </p>
-                        <p className="text-2xl md:text-2xl font-medium text-custom-piel dark:text-custom-beige font-fira">
-                            <span className="text-lg font-light text-custom-piel/70 dark:text-custom-beige/70 mb-2">Paquete de 12 sesiones:</span> &nbsp;<span className="line-through">${rate * 12}</span> &nbsp;&nbsp;<span className='font-bold'>${(rate * 12 - (rate * 12 * 0.20)).toFixed(2).toLocaleString()}</span>
+                        <p className="text-2xl md:text-2xl font-medium text-custom-piel dark:text-custom-beige font-fira flex flex-col gap-2 md:flex-row justify-center">
+                            <span className="text-lg font-light text-custom-piel/70 dark:text-custom-beige/70 mb-2">Paquete de 12 sesiones:</span><div><span className="line-through">${rate * 12}</span>&nbsp;&nbsp;<span className='font-bold'>${(rate * 12 - (rate * 12 * 0.20)).toLocaleString()}</span></div>
                         </p>
                         <p className="text-md text-custom-piel/50 dark:text-custom-beige/50 mt-4 text-center max-w-lg">
                             * Este es un costo aproximado. El costo real puede aumentar o disminuir dependiendo de las caracteristicas de tu tatuaje, te invitamos a mandarnos un mensaje para revisar tu caso personalmente

@@ -1,8 +1,8 @@
 ---
 import PricingCalculator from "./PricingCalculator.jsx";
 
-import ManosDark from "../../assets/services/tattoos/manos_dark.png";
-import ManosLight from "../../assets/services/tattoos/manos_light.png";
+import ManosDark from "../../assets/services/tattoos/manos_dark.avif";
+import ManosLight from "../../assets/services/tattoos/manos_light.avif";
 import { Image } from "astro:assets";
 ---
 
@@ -41,11 +41,13 @@ import { Image } from "astro:assets";
                 src={ManosDark}
                 alt="Guia visual de tamaños de tatuajes"
                 class="hidden dark:block"
+                format="avif"
             />
             <Image
                 src={ManosLight}
                 alt="Guia visual de tamaños de tatuajes"
                 class="block dark:hidden"
+                format="avif"
             />
         </div>
     </div>

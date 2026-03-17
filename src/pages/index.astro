@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 import Body from "../components/Body.astro";
 
 import Hero from "../components/index/Hero.astro";
-import Services from "../components/index/Services.jsx";
+import Services from "../components/index/Services.astro";
 import Reviews from "../components/index/Reviews.jsx";
 import Location from "../components/index/Location.astro";
 ---
@@ -14,7 +14,7 @@ import Location from "../components/index/Location.astro";
 <Layout>
     <Body>
         <Hero />
-        <Services client:load />
+        <Services />
         <Reviews client:only="react" />
         <Location />
     </Body>

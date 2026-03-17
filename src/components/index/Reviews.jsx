@@ -165,6 +165,18 @@ const Reviews = () => {
                         "text": "Muy amables y atentos, te explican el proceso muy bien. Muy limpio y excelente ubicación. Si lo recomiendo",
                         "time": 1770769039,
                         "translated": false
+                    },
+                    {
+                        "author_name": "Ceci Ozuna",
+                        "author_url": "https://www.google.com/maps/contrib/100468740286224283031/reviews",
+                        "language": "es",
+                        "original_language": "es",
+                        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjW6714rAwwdOboSmUImO-PyEWqdfKDurCXvukWj_aCLnADZp9Bw=s128-c0x00000000-cc-rp-mo-ba3",
+                        "rating": 5,
+                        "relative_time_description": "3 weeks ago",
+                        "text": "Buena atención y trato amable, muy poco dolor, muy recordable",
+                        "time": 1770769039,
+                        "translated": false
                     }
                 ],
                 rating: 5,
@@ -194,11 +206,14 @@ const Reviews = () => {
                         Descubre lo que nuestros clientes opinan de nuestros servicios.
                     </p>
                 </div>
-                <div className="w-3/4 md:w-1/3 mx-auto">
+                <div className="w-2/3 md:w-1/2 lg:w-100 mx-auto">
                     <Rating isPending={false} data={data} />
                 </div>
                 <div className="w-[calc(97vw)]">
-                    <Marquee>
+                    <Marquee
+                        className="py-4"
+                        autoFill
+                    >
                         {elements}
                     </Marquee>
                 </div>
@@ -240,21 +255,7 @@ const Review = ({ review }) => {
 const Rating = ({ isPending, data }) => {
     const rating = data?.data?.result?.rating;
     const total = data?.data?.result?.user_ratings_total;
-    const isLoading = isPending;
-
-    if (isLoading) {
-        return (
-            <div className="mx-auto p-6 mb-8 border border-custom-piel/10 dark:border-custom-beige/20 rounded-[24px] shadow-sm bg-custom-beige-light dark:bg-custom-oscuro backdrop-blur-md items-center animate-pulse">
-                <div className="flex justify-around gap-8">
-                    <div className="w-[70px] h-[70px] bg-custom-piel/10 dark:bg-custom-beige/10 rounded-full"></div>
-                    <div className="flex-1 flex flex-col justify-center space-y-3">
-                        <div className="h-6 bg-custom-piel/10 dark:bg-custom-beige/10 rounded w-3/4"></div>
-                        <div className="h-6 bg-custom-piel/10 dark:bg-custom-beige/10 rounded w-1/2"></div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    const isLoading = isPending
 
     return (
         <div className="mx-auto p-6 mb-8 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 rounded-[24px] shadow-sm hover:shadow-md bg-custom-beige-light dark:bg-custom-oscuro backdrop-blur-md items-center transition-all duration-300">
