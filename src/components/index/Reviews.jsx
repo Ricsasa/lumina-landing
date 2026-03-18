@@ -225,7 +225,7 @@ const Reviews = () => {
 const Review = ({ review }) => {
     const { author_name, rating, relative_time_description, text } = review
     return (
-        <div className="flex flex-col w-[350px] min-h-[220px] p-6 mx-4 bg-custom-beige-light dark:bg-custom-oscuro rounded-[24px] shadow-sm hover:shadow-md transition-shadow duration-300 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40">
+        <div className="flex flex-col w-[350px] min-h-[220px] p-6 mx-4 bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40">
             <div className="flex items-center mb-4">
                 <div className="flex">
                     {[...Array(5)].map((_, i) => (
