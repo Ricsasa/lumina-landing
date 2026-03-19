@@ -1,0 +1,154 @@
+---
+import { Image } from "astro:assets";
+import SkinIcon from "../../assets/branding/skin-icon.svg";
+import BeigeIcon from "../../assets/branding/beige-icon.svg";
+
+import gsap from "gsap";
+
+const texts = [
+    {
+        service: "Eliminación de Tatuajes",
+        phrase: "Prepara tu piel para un nuevo inicio",
+    },
+    {
+        service: "Eliminación de Micropigmentación",
+        phrase: "Recupera tu expresión natural",
+    },
+    {
+        service: "Despigmentación facial y corporal",
+        phrase: "Regresa tu piel a su tono natural",
+    },
+    {
+        service: "Hollywood Peel",
+        phrase: "Ilumina tu rostro",
+    },
+    {
+        service: "Microneedling",
+        phrase: "Revitaliza tu piel",
+    },
+];
+---
+
+<section
+    class="relative w-full min-h-screen overflow-hidden flex flex-col items-center justify-center bg-custom-beige-light dark:bg-custom-oscuro text-custom-oscuro dark:text-custom-beige-light transition-colors duration-500 gap-4 md:gap-8"
+>
+    <div
+        class="relative z-20 w-full md:max-w-5xl mx-auto md:px-6 flex flex-col"
+    >
+        <div class="h-60 flex flex-col m-10 z-100">
+            <div class="h-18 md:h-12 flex flex-col justify-end">
+                {
+                    texts.map((text) => (
+                        <span class="phrase text-3xl md:text-5xl font-bold text-custom-oscuro dark:text-custom-beige-light w-full hidden align-text-bottom">
+                            {text.phrase}
+                        </span>
+                    ))
+                }
+            </div>
+            <h1
+                class="text-3xl md:text-5xl font-bold text-custom-oscuro dark:text-custom-beige-light w-full title-fixed opacity-0"
+            >
+                en <span class="text-custom-piel">Lumina Estudio Láser</span>
+            </h1>
+            {
+                texts.map((text) => (
+                    <h2 class="service text-lg md:text-xl font-bold text-custom-oscuro dark:text-custom-beige-light w-full hidden mt-6 md:mt-12">
+                        {text.service}
+                    </h2>
+                ))
+            }
+        </div>
+
+        <div class="absolute -z-1000 left-1/2 md:left-2/3">
+            <Image
+                src={SkinIcon}
+                alt="Lumina Icon"
+                class="w-40 h-40 md:w-60 md:h-60 block dark:hidden opacity-20"
+                format="avif"
+            />
+            <Image
+                src={BeigeIcon}
+                alt="Lumina Icon"
+                class="w-40 h-40 md:w-60 md:h-60 hidden dark:block opacity-20"
+                format="avif"
+            />
+        </div>
+    </div>
+    <div class="flex flex-col gap-6 justify-end">
+        <a
+            href="/#servicios"
+            class="group relative inline-flex items-center justify-center rounded-full px-5 py-2.5 font-medium transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-custom-piel/50
+                bg-custom-piel/10 text-custom-piel hover:bg-custom-piel/20 dark:bg-custom-beige/10 dark:text-custom-beige dark:hover:bg-custom-beige/20"
+        >
+            <span>Conoce todos nuestros servicios</span>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+        </a>
+    </div>
+</section>
+
+<script>
+    import gsap from "gsap";
+
+    const titleFixed = document.querySelector(".title-fixed");
+    const phrases = document.querySelectorAll(".phrase");
+    const services = document.querySelectorAll(".service");
+
+    const tl = gsap.timeline({ repeat: -1 });
+    const tl2 = gsap.timeline({ repeat: -1 });
+
+    phrases.forEach((phrase, index) => {
+        tl.fromTo(
+            phrase,
+            { opacity: 0, display: "none" },
+            {
+                opacity: 1,
+                display: "block",
+                duration: 0.7,
+                ease: "power2.inOut",
+            },
+        ).to(phrase, {
+            opacity: 0,
+            display: "none",
+            duration: 0.7,
+            delay: 1.9,
+            ease: "power2.inOut",
+        });
+    });
+
+    services.forEach((service, index) => {
+        tl2.fromTo(
+            service,
+            { opacity: 0, display: "none" },
+            {
+                opacity: 1,
+                display: "block",
+                duration: 0.7,
+                ease: "power2.inOut",
+            },
+        ).to(service, {
+            opacity: 0,
+            display: "none",
+            duration: 0.7,
+            delay: 1.9,
+            ease: "power2.inOut",
+        });
+    });
+
+    gsap.to(titleFixed, {
+        opacity: 1,
+        duration: 0.7,
+        ease: "power2.inOut",
+    });
+</script>

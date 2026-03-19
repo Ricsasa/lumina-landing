@@ -48,7 +48,7 @@ export default function Header() {
     return (
         <header>
             <nav className="fixed top-0 z-100 w-full transition-shadow duration-300">
-                <div className={`w-full backdrop-blur-md border-b bg-transparent border-transparent`}
+                <div className={`w-full backdrop-blur-3xl border-b bg-transparent border-transparent`}
                 >
                     <div className={`mx-auto w-full max-w-7xl flex items-center justify-between px-6 md:px-12 py-2 h-20`}
                     >
