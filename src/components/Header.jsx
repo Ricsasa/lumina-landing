@@ -5,7 +5,8 @@ import {
 } from '@headlessui/react'
 import { XMarkIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 
-import VerticalSkinLogo from "../assets/branding/skin-logo.svg?react";
+import SkinLogo from "../assets/branding/skin-logo.svg";
+import BeigeLogo from "../assets/branding/beige-logo.svg";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +56,8 @@ export default function Header() {
                         <div className="flex shrink-0 items-center">
                             <div className={`w-36 md:w-54`}>
                                 <a href="/" className="block focus:outline-none focus:ring-2 focus:ring-custom-piel/50 rounded-lg" aria-label="Lumina Estudio Láser">
-                                    <VerticalSkinLogo className="text-custom-piel dark:text-custom-beige" alt="Lumina Estudio Láser" aria-label="Lumina Estudio Láser" />
+                                    <img src={SkinLogo.src} className="dark:hidden" alt="Lumina Estudio Láser" aria-label="Lumina Estudio Láser" />
+                                    <img src={BeigeLogo.src} className="hidden dark:block" alt="Lumina Estudio Láser" aria-label="Lumina Estudio Láser" />
                                 </a>
                             </div>
                         </div>

@@ -201,7 +201,7 @@ const Reviews = () => {
                         Reseñas
                     </h2>
                     <p
-                        className="mt-4 px-4 md:px-0 text-base md:text-lg text-custom-beige/80 font-light"
+                        className="mt-4 px-4 md:px-0 text-base md:text-lg text-custom-oscuro/80 font-light"
                     >
                         Descubre lo que nuestros clientes opinan de nuestros servicios.
                     </p>
@@ -239,7 +239,7 @@ const Review = ({ review }) => {
                 </span>
             </div>
 
-            <p className="grow text-sm md:text-base font-light leading-relaxed text-custom-piel/80 dark:text-custom-beige/80 line-clamp-4">
+            <p className="grow text-sm md:text-base font-light leading-relaxed text-custom-oscuro dark:text-custom-piel line-clamp-4">
                 &quot;{text}&quot;
             </p>
 
@@ -263,7 +263,7 @@ const Rating = ({ isPending, data }) => {
                 <div className="flex justify-around gap-8">
                     <GoogleMapsLogo width={70} className="shrink-0 saturate-50 group-hover:saturate-100 transition-all duration-300" />
                     <div className="flex flex-col justify-center">
-                        <p className="flex flex-col lg:flex-row gap-4 pb-2 dark:text-custom-beige font-fira items-center">
+                        <p className="flex flex-col lg:flex-row gap-4 pb-2 dark:text-custom-piel font-fira items-center">
                             <span className="text-sm md:text-xl font-medium">{rating} / 5</span>
                             <span className="flex">
                                 {[...Array(5)].map((_, i) => (
@@ -273,7 +273,7 @@ const Rating = ({ isPending, data }) => {
                                 ))}
                             </span>
                         </p>
-                        <p className="text-sm md:text-lg font-light tracking-wide text-custom-piel/80 dark:text-custom-beige/80 text-center">
+                        <p className="text-sm md:text-lg font-light tracking-wide text-custom-oscuro dark:text-custom-piel text-center">
                             Basado en {total} reseñas
                         </p>
                     </div>

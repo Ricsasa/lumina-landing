@@ -1,5 +1,6 @@
 ---
 import VerticalSkinLogo from "../assets/branding/vertical-skin-logo.svg";
+import VerticalBeigeLogo from "../assets/branding/vertical-beige-logo.svg";
 
 import FacebookSvg from "../assets/external/facebook.svg";
 import InstagramSvg from "../assets/external/instagram.svg";
@@ -22,9 +23,19 @@ const year = new Date().getFullYear();
                     class="block transition-transform duration-300 hover:scale-105"
                     title="Lumina Estudio Láser GDL"
                 >
-                    <VerticalSkinLogo
+                    <img
+                        src={VerticalSkinLogo.src}
                         width={140}
-                        class="text-custom-piel dark:text-custom-beige"
+                        class="block dark:hidden"
+                        alt="Lumina Estudio Láser GDL"
+                        title="Lumina Estudio Láser GDL"
+                    />
+                    <img
+                        src={VerticalBeigeLogo.src}
+                        width={140}
+                        class="hidden dark:block"
+                        alt="Lumina Estudio Láser GDL"
+                        title="Lumina Estudio Láser GDL"
                     />
                 </a>
             </div>

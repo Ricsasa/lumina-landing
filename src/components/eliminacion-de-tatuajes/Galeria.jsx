@@ -19,7 +19,7 @@ export default function Galeria() {
                     Galería
                 </h2>
                 <p
-                    className="mt-4 text-base md:text-lg text-custom-piel/70 dark:text-custom-beige/70 font-light"
+                    className="mt-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light"
                 >
                     Ver nuestros resultados.
                 </p>

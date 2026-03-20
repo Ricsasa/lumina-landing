@@ -65,7 +65,7 @@ export default function PricingCalculator() {
                 <div className="flex flex-col md:flex-row gap-6">
                     {/* Alto Input */}
                     <div className="flex-1 flex flex-col relative">
-                        <label className="text-sm font-medium text-custom-piel/80 dark:text-custom-beige/80 mb-1.5 ml-1">
+                        <label className="text-sm font-medium text-custom-oscuro dark:text-custom-piel mb-1.5 ml-1">
                             Alto (en cm) <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -89,7 +89,7 @@ export default function PricingCalculator() {
 
                     {/* Ancho Input */}
                     <div className="flex-1 flex flex-col relative">
-                        <label className="text-sm font-medium text-custom-piel/80 dark:text-custom-beige/80 mb-1.5 ml-1">
+                        <label className="text-sm font-medium text-custom-oscuro dark:text-custom-piel mb-1.5 ml-1">
                             Ancho (en cm) <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -113,7 +113,7 @@ export default function PricingCalculator() {
                 </div>
 
                 <div className="flex flex-col relative">
-                    <label className="text-sm font-medium text-custom-piel/80 dark:text-custom-beige/80 mb-1.5 ml-1">
+                    <label className="text-sm font-medium text-custom-oscuro dark:text-custom-piel mb-1.5 ml-1">
                         Tipo de Tinta
                     </label>
                     <div className="relative">
@@ -143,21 +143,21 @@ export default function PricingCalculator() {
 
             {resultado && (
                 <div className="mt-8 pt-6 border-t border-custom-piel/10 dark:border-custom-beige/10 flex flex-col items-center animate-fade-in-up">
-                    <span className="text-sm font-light text-custom-piel/70 dark:text-custom-beige/70 mb-2">Costo estimado por sesión</span>
+                    <span className="text-sm font-light text-custom-oscuro dark:text-custom-piel mb-2">Costo estimado por sesión</span>
                     <p className="text-4xl md:text-5xl font-medium text-custom-piel dark:text-custom-beige font-fira">
                         {resultado}
                     </p>
                     <div className="flex flex-col gap-2 mt-4 text-center">
                         <p className="text-2xl md:text-2xl font-medium text-custom-piel dark:text-custom-beige font-fira flex flex-col gap-2 md:flex-row justify-center">
-                            <span className="text-lg font-light text-custom-piel/70 dark:text-custom-beige/70 mb-2">Paquete de 4 sesiones:</span><div><span className="line-through">${rate * 4}</span>&nbsp;&nbsp;<span className='font-bold'>${(rate * 4 - (rate * 4 * 0.1)).toLocaleString()}</span></div>
+                            <span className="text-lg font-light text-custom-oscuro dark:text-custom-piel mb-2">Paquete de 4 sesiones:</span><div><span className="line-through">${rate * 4}</span>&nbsp;&nbsp;<span className='font-bold'>${(rate * 4 - (rate * 4 * 0.1)).toLocaleString()}</span></div>
                         </p>
                         <p className="text-2xl md:text-2xl font-medium text-custom-piel dark:text-custom-beige font-fira flex flex-col gap-2 md:flex-row justify-center">
-                            <span className="text-lg font-light text-custom-piel/70 dark:text-custom-beige/70 mb-2">Paquete de 8 sesiones:</span><div><span className="line-through">${rate * 8}</span>&nbsp;&nbsp;<span className='font-bold'>${(rate * 8 - (rate * 8 * 0.15)).toLocaleString()}</span></div>
+                            <span className="text-lg font-light text-custom-oscuro dark:text-custom-piel mb-2">Paquete de 8 sesiones:</span><div><span className="line-through">${rate * 8}</span>&nbsp;&nbsp;<span className='font-bold'>${(rate * 8 - (rate * 8 * 0.15)).toLocaleString()}</span></div>
                         </p>
                         <p className="text-2xl md:text-2xl font-medium text-custom-piel dark:text-custom-beige font-fira flex flex-col gap-2 md:flex-row justify-center">
-                            <span className="text-lg font-light text-custom-piel/70 dark:text-custom-beige/70 mb-2">Paquete de 12 sesiones:</span><div><span className="line-through">${rate * 12}</span>&nbsp;&nbsp;<span className='font-bold'>${(rate * 12 - (rate * 12 * 0.20)).toLocaleString()}</span></div>
+                            <span className="text-lg font-light text-custom-oscuro dark:text-custom-piel mb-2">Paquete de 12 sesiones:</span><div><span className="line-through">${rate * 12}</span>&nbsp;&nbsp;<span className='font-bold'>${(rate * 12 - (rate * 12 * 0.20)).toLocaleString()}</span></div>
                         </p>
-                        <p className="text-md text-custom-piel/50 dark:text-custom-beige/50 mt-4 text-center max-w-lg">
+                        <p className="text-md text-custom-piel dark:text-custom-beige mt-4 text-center max-w-lg">
                             * Este es un costo aproximado. El costo real puede aumentar o disminuir dependiendo de las caracteristicas de tu tatuaje, te invitamos a mandarnos un mensaje para revisar tu caso personalmente
                         </p>
                     </div>
