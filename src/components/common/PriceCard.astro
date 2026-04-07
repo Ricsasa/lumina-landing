@@ -2,11 +2,10 @@
 interface Props {
     title: string;
     description: string;
-    price?: string;
-    pricePrefix?: string;
+    pricePrefix?: boolean;
 }
 
-const { title, description, price, pricePrefix = "Desde" } = Astro.props;
+const { title, description, pricePrefix } = Astro.props;
 
 const baseCardClasses =
     "flex flex-col w-full sm:w-[350px] p-4 md:p-6 lg:p-8 bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] transition-all duration-300";
@@ -33,19 +32,18 @@ const cardClasses = `${baseCardClasses} ${normalCardClasses}`;
         </div>
     </div>
 
-    <div class="mt-auto flex justify-between items-center">
+    <div class="px-6 mt-auto flex justify-between items-center">
         <div>
             {
                 pricePrefix && (
                     <span class="text-sm font-light text-custom-piel/60 dark:text-custom-beige/60">
-                        {pricePrefix}
+                        Desde
                     </span>
                 )
             }
             <p
                 class="text-3xl font-medium text-custom-piel dark:text-custom-beige font-fira"
             >
-                {price}
                 <slot />
             </p>
         </div>

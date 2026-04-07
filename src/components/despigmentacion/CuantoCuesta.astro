@@ -25,32 +25,35 @@ const whatsappMessage =
     </div>
 
     <div
-        class="w-[calc(100vw-2em)] max-w-5xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8"
+        class="w-[calc(100vw-2em)] max-w-6xl mx-auto flex flex-wrap justify-center gap-6 md:gap-8"
     >
         <PriceCard
             title="Rostro"
             description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en el rostro."
-            price="$700 por sesión"
-        />
+            pricePrefix
+        >
+            $700 por sesión
+        </PriceCard>
 
         <PriceCard
             title="Axilas"
             description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en las axilas."
-            price="$700 por sesión"
-        />
+            pricePrefix
+        >
+            $700 por sesión
+        </PriceCard>
 
         <PriceCard
             title="Manos"
             description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en las manos."
-            price="$700 por sesión"
-        />
-    </div>
+            pricePrefix
+        >
+            $700 por sesión
+        </PriceCard>
 
-    <div class="mx-auto max-w-2xl text-center mt-12">
         <PriceCard
             title="Paquete de 4 sesiones"
             description="Aprovecha nuestros paquetes de 4 sesiones y ahorra."
-            pricePrefix=""
         >
             <>
                 <span
@@ -64,6 +67,7 @@ const whatsappMessage =
             </>
         </PriceCard>
     </div>
+
     <div class="mx-auto max-w-3xl text-center mt-12">
         <p
             class="text-2xl text-custom-piel dark:text-custom-beige font-light px-4"

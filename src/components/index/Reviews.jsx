@@ -180,7 +180,7 @@ const Reviews = () => {
                     }
                 ],
                 rating: 5,
-                user_ratings_total: 28
+                user_ratings_total: 29
             }
         }
     }
@@ -191,17 +191,17 @@ const Reviews = () => {
 
     return (
         <section
-            className="justify-center md:px-6 scroll-mt-24 bg-custom-piel dark:bg-custom-piel/90 py-12 flex flex-col items-center w-full"
+            className="justify-center md:px-6 scroll-mt-24 py-12 flex flex-col items-center w-full"
             id="reviews">
             <div className="py-8 mx-auto lg:py-16">
                 <div className="mx-auto max-w-screen-sm text-center mb-12">
                     <h2
-                        className="text-3xl md:text-5xl font-medium tracking-tight text-custom-beige font-fira"
+                        class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
                     >
                         Reseñas
                     </h2>
                     <p
-                        className="mt-4 px-4 md:px-0 text-base md:text-lg text-custom-oscuro/80 font-light"
+                        class="mt-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light"
                     >
                         Descubre lo que nuestros clientes opinan de nuestros servicios.
                     </p>
@@ -213,6 +213,7 @@ const Reviews = () => {
                     <Marquee
                         className="py-4"
                         autoFill
+                        pauseOnHover
                     >
                         {elements}
                     </Marquee>
@@ -225,7 +226,7 @@ const Reviews = () => {
 const Review = ({ review }) => {
     const { author_name, rating, relative_time_description, text } = review
     return (
-        <div className="flex flex-col w-[350px] min-h-[220px] p-6 mx-4 bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40">
+        <div className="flex flex-col w-[350px] min-h-[220px] p-6 mx-4 bg-white dark:bg-custom-beige/5 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 backdrop-blur-sm">
             <div className="flex items-center mb-4">
                 <div className="flex">
                     {[...Array(5)].map((_, i) => (
@@ -258,8 +259,8 @@ const Rating = ({ isPending, data }) => {
     const isLoading = isPending
 
     return (
-        <div className="mx-auto p-6 mb-8 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 rounded-[24px] shadow-sm hover:shadow-md bg-custom-beige-light dark:bg-custom-oscuro backdrop-blur-md items-center transition-all duration-300">
-            <a href='https://maps.app.goo.gl/QsCe1PNkZYdcLpfr7' target="_blank" rel="noopener noreferrer" className="group">
+        <a href='https://maps.app.goo.gl/QsCe1PNkZYdcLpfr7' target="_blank" rel="noopener noreferrer" className="group">
+            <div className="mx-auto p-6 mb-8 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 rounded-[24px] shadow-sm hover:shadow-md bg-white dark:bg-custom-beige/5 backdrop-blur-md items-center transition-all duration-300">
                 <div className="flex justify-around gap-8">
                     <GoogleMapsLogo width={70} className="shrink-0 saturate-50 group-hover:saturate-100 transition-all duration-300" />
                     <div className="flex flex-col justify-center">
@@ -278,8 +279,8 @@ const Rating = ({ isPending, data }) => {
                         </p>
                     </div>
                 </div>
-            </a>
-        </div>
+            </div>
+        </a>
     );
 }
 

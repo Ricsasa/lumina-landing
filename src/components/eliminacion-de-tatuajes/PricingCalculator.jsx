@@ -49,7 +49,7 @@ export default function PricingCalculator() {
 
         setResultado(precioStr)
 
-        setWhatsappMessage(`Hola, me gustaría obtener un presupuesto para la eliminación de tatuajes con las siguientes dimensiones: Altura: ${alto} cm, Ancho: ${ancho} cm, Tipo de tinta: ${tinta}.`)
+        setWhatsappMessage(`Hola, me gustaría obtener un presupuesto para la eliminación de tatuajes con las siguientes dimensiones: Altura: ${alto} cm, Ancho: ${ancho} cm, Tipo de tinta: ${tinta}. Mi cotización inicial fue de ${precioStr}, ¿me das información personalizada?`)
     };
 
     return (

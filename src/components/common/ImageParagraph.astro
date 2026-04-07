@@ -31,7 +31,11 @@ const imageOrder = isLeft ? "order-2 md:order-1" : "order-2 md:order-2";
                 </h3>
             )
         }
-        <slot />
+        <p
+            class="text-sm md:text-lg text-custom-oscuro dark:text-custom-piel font-light text-justify leading-loose"
+        >
+            <slot />
+        </p>
     </div>
 
     <div class={`w-full ${imageOrder}`}>
