@@ -1,22 +1,22 @@
 ---
-import { Image } from "astro:assets";
 import Eyebrows from "../../assets/services/eyebrows.avif";
 import Dermapen from "../../assets/services/dermapen.avif";
 import Hollywood from "../../assets/services/hollywood.avif";
 import Tattoo from "../../assets/services/tattoo.avif";
 import Armpit from "../../assets/services/armpit2.avif";
+import ServiceCard from "./ServiceCard.astro";
 
 const services = [
     {
         title: "Eliminación de tatuajes",
         image: Tattoo,
-        className: "md:col-span-4",
+        className: "md:col-span-6",
         href: "/eliminacion-de-tatuajes",
     },
     {
         title: "Eliminación de micropigmentación",
         image: Eyebrows,
-        className: "md:col-span-4",
+        className: "md:col-span-6",
         href: "/eliminacion-micropigmentacion",
     },
     {
@@ -28,7 +28,7 @@ const services = [
     {
         title: "Hollywood Peel",
         image: Hollywood,
-        className: "md:col-start-3 md:col-span-4",
+        className: "md:col-span-4",
         href: "/hollywood-peel",
     },
     {
@@ -41,7 +41,7 @@ const services = [
 ---
 
 <section class="flex items-center md:px-6 py-12 flex-col w-full" id="servicios">
-    <div class="py-8 mx-auto lg:py-16 w-full container max-w-7xl">
+    <div class="py-8 mx-auto lg:py-16 w-full container max-w-6xl">
         <div class="mx-auto max-w-screen-sm text-center mb-12">
             <h2
                 class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
@@ -59,58 +59,7 @@ const services = [
         <div
             class="flex flex-col md:grid md:grid-cols-12 gap-4 md:gap-6 lg:gap-8 w-full"
         >
-            {
-                services.map((service) => (
-                    <div
-                        class={`group flex flex-col w-full max-w-sm md:max-w-none mx-auto overflow-hidden bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/30 dark:hover:border-custom-beige/40 ${service.className || ""}`}
-                    >
-                        <a
-                            href={service.href}
-                            class="relative block overflow-hidden"
-                        >
-                            <Image
-                                class="object-cover w-full h-64 sm:h-80 md:h-86 lg:h-90 transition-transform duration-700 group-hover:scale-105 saturate-60"
-                                src={service.image}
-                                alt={service.title}
-                                title={service.title}
-                                format="avif"
-                            />
-                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-linear-to-t from-custom-beige-light dark:from-custom-oscuro via-custom-beige-light/60 dark:via-custom-oscuro/60 to-transparent pointer-events-none" />
-                        </a>
-                        <div class="flex flex-col grow px-6 pb-6 md:px-8 md:pb-8 pt-0 md:pt-0 -mt-4 md:-mt-2 relative z-10">
-                            <a href={service.href}>
-                                <h3 class="mb-6 text-2xl md:text-3xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira">
-                                    {service.title}
-                                </h3>
-                            </a>
-
-                            <div class="mt-auto">
-                                <a
-                                    href={service.href}
-                                    class="w-full inline-flex items-center justify-center px-6 py-3.5 text-[15px] font-medium tracking-wide transition-colors duration-300 rounded-full bg-custom-piel/10 text-custom-oscuro hover:bg-custom-piel/20 dark:bg-custom-piel/20 dark:text-custom-piel hover:dark:bg-custom-beige focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
-                                >
-                                    <span>Saber más</span>
-                                    <svg
-                                        class="w-4 h-4 ml-2 -mr-1 rtl:mr-2 rtl:-ml-1"
-                                        aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M19 12H5m14 0-4 4m4-4-4-4"
-                                        />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                ))
-            }
+            {services.map((service) => <ServiceCard {...service} />)}
         </div>
     </div>
 </section>

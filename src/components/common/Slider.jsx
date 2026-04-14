@@ -9,7 +9,7 @@ export default function Slider({
     description
 }) {
     return (
-        <div className="w-1/2 md:w-xs max-w-4xl mx-auto flex flex-col overflow-hidden bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl md:rounded-[32px] shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 hover:dark:border-custom-beige/40 transition-colors duration-300">
+        <div className="w-[60%] md:w-xs max-w-4xl mx-auto flex flex-col overflow-hidden bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl md:rounded-[32px] shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 hover:dark:border-custom-beige/40 transition-colors duration-300">
 
             {/* Image Comparison Area */}
             <div className="relative w-full aspect-auto rounded-t-2xl md:rounded-t-[32px] overflow-hidden bg-black/5 dark:bg-white/5">
