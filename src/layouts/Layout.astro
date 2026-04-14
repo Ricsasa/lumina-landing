@@ -11,6 +11,7 @@ const {
 		title: "Excelencia en tratamientos de cuidado para tu piel.",
 		description:
 			"Lumina Estudio Láser GDL | Tratamientos profesionales de depilación láser, micropigmentación, eliminación de tatuajes y más.",
+		canonical: "https://luminaestudiolaser.com",
 	},
 } = Astro.props;
 ---
@@ -31,7 +32,7 @@ const {
 
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-		<link rel="canonical" href="https://luminaestudiolaser.com" />
+		<link rel="canonical" href={seo.canonical} />
 
 		<!-- Google tag (gtag.js) -->
 		<script
