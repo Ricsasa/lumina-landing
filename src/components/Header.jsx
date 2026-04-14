@@ -26,23 +26,23 @@ export default function Header() {
     const navigation = [
         {
             name: 'Eliminación de tatuajes',
-            href: '/eliminacion-de-tatuajes'
+            href: '/eliminacion-de-tatuajes/'
         },
         {
             name: 'Eliminación de micropigmentación',
-            href: '/eliminacion-micropigmentacion'
+            href: '/eliminacion-micropigmentacion/'
         },
         {
             name: 'Despigmentación facial y corporal',
-            href: '/despigmentacion'
+            href: '/despigmentacion/'
         },
         {
             name: 'Hollywood Peel',
-            href: '/hollywood-peel'
+            href: '/hollywood-peel/'
         },
         {
             name: 'Microneedling (Dermapen)',
-            href: '/microneedling'
+            href: '/microneedling/'
         },
     ]
 
