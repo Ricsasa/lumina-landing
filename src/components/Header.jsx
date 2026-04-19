@@ -89,16 +89,16 @@ export default function Header() {
                 ${isOpen ? 'translate-x-0' : 'translate-x-full'} 
                 `}
             >
-                <div className='flex justify-between items-center px-8 py-6 border-b border-custom-piel/10 dark:border-custom-beige/10'>
+                <div className='flex justify-between items-center px-8 py-2 md:py-6 border-b border-custom-piel/10 dark:border-custom-beige/10'>
                     <button
                         onClick={toggleTheme}
                         className="p-3 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors cursor-pointer text-custom-piel dark:text-custom-beige focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                         aria-label="Cambiar tema"
                     >
                         {theme === 'light' ? (
-                            <MoonIcon className="w-10 h-10" />
+                            <MoonIcon className="w-8 h-8 md:w-10 md:h-10" />
                         ) : (
-                            <SunIcon className="w-10 h-10" />
+                            <SunIcon className="w-8 h-8 md:w-10 md:h-10" />
                         )}
                     </button>
                     <Button
@@ -106,7 +106,7 @@ export default function Header() {
                         onClick={() => setIsOpen(false)}
                         aria-label="Cerrar menú"
                     >
-                        <XMarkIcon className="w-10 h-10" />
+                        <XMarkIcon className="w-8 h-8 md:w-10 md:h-10" />
                     </Button>
                 </div>
 
@@ -135,6 +135,14 @@ export default function Header() {
                             title="Nuestros Servicios"
                         >
                             Nuestros Servicios
+                        </a>
+                        <a
+                            href="/#galeria-principal"
+                            className="px-4 py-2 rounded-2xl text-xl md:text-3xl font-medium tracking-wide text-custom-piel dark:text-custom-beige hover:bg-custom-piel/5 dark:hover:bg-custom-beige/5 transition-colors duration-200"
+                            onClick={() => setIsOpen(false)}
+                            title="Galería"
+                        >
+                            Galería
                         </a>
                         <a
                             href="/#reviews"

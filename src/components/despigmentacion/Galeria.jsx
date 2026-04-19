@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from '../common/Slider.jsx';
+import Axilas from "../../assets/gallery/axilas.avif"
 
 export default function Galeria() {
     return (
@@ -20,7 +21,15 @@ export default function Galeria() {
                 </p>
             </div>
 
-            {/* Insert sliders here for despigmentacion */}
+            <div className="mb-16 w-full px-6 container max-w-6xl mx-auto flex flex-col gap-6 lg:gap-8 items-center">
+                <div className="w-full md:col-span-6 md:mt-10 flex justify-center">
+                    <img
+                        src={Axilas.src}
+                        alt="Axilas"
+                        className="w-1/2"
+                    />
+                </div>
+            </div>
         </section>
     );
 }

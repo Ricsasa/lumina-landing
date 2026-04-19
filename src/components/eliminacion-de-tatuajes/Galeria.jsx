@@ -36,7 +36,7 @@ export default function Galeria() {
                 </p>
             </div>
 
-            <div className="mb-16 w-full px-6 container max-w-6xl mx-auto flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-8 items-center md:items-start">
+            <div className="mb-16 w-full px-6 container max-w-6xl mx-auto flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-8 items-center">
                 <div className="w-full md:col-span-6">
                     <Slider
                         image1={AleA}

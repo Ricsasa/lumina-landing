@@ -1,0 +1,211 @@
+---
+import VerticalSkinLogo from "../assets/branding/vertical-skin-logo.svg";
+import VerticalBeigeLogo from "../assets/branding/vertical-beige-logo.svg";
+
+import FacebookSvg from "../assets/external/facebook.svg";
+import InstagramSvg from "../assets/external/instagram.svg";
+import TiktokSvg from "../assets/external/tiktok.svg";
+
+import { 
+    MapPinIcon, 
+    PhoneIcon,
+    Bars3Icon
+} from "@heroicons/react/24/outline";
+
+const year = new Date().getFullYear();
+
+const services = [
+    {
+        name: 'Eliminación de tatuajes',
+        href: '/eliminacion-de-tatuajes/'
+    },
+    {
+        name: 'Eliminación de micropigmentación',
+        href: '/eliminacion-micropigmentacion/'
+    },
+    {
+        name: 'Despigmentación facial y corporal',
+        href: '/despigmentacion/'
+    },
+    {
+        name: 'Hollywood Peel',
+        href: '/hollywood-peel/'
+    },
+    {
+        name: 'Microneedling (Dermapen)',
+        href: '/microneedling/'
+    },
+];
+
+const navigation = [
+    {
+        name: 'Nuestros Servicios',
+        href: '/#servicios'
+    },
+    {
+        name: 'Galería',
+        href: '/#galeria-principal'
+    },
+    {
+        name: 'Reseñas',
+        href: '/#reviews'
+    },
+    {
+        name: 'Nuestra Ubicación',
+        href: '/#ubicacion'
+    },
+];
+---
+
+<footer
+    class="bg-custom-beige-light dark:bg-custom-oscuro border-t border-custom-piel/10 dark:border-custom-beige/10"
+>
+    <div class="mx-auto w-full max-w-7xl px-4 md:px-12 py-10 md:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-12">
+            <!-- Branding & Contact Section -->
+            <div class="flex flex-col items-center md:items-start gap-6 md:gap-8">
+                <a
+                    href="/"
+                    class="block transition-transform duration-300 hover:scale-105"
+                    title="Lumina Estudio Láser GDL"
+                >
+                    <img
+                        src={VerticalSkinLogo.src}
+                        width={120}
+                        class="block dark:hidden md:w-[140px]"
+                        alt="Lumina Estudio Láser GDL"
+                        title="Lumina Estudio Láser GDL"
+                    />
+                    <img
+                        src={VerticalBeigeLogo.src}
+                        width={120}
+                        class="hidden dark:block md:w-[140px]"
+                        alt="Lumina Estudio Láser GDL"
+                        title="Lumina Estudio Láser GDL"
+                    />
+                </a>
+
+                <div class="flex flex-col gap-3 md:gap-4 items-center md:items-start">
+                    <a 
+                        href="https://maps.app.goo.gl/oHGPfz5yCKV8uaas6" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="flex items-start gap-3 group text-custom-piel/80 dark:text-custom-beige/80 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300 text-center md:text-left"
+                    >
+                        <MapPinIcon className="w-4 h-4 md:w-5 md:h-5 mt-1 shrink-0" />
+                        <span class="text-xs md:text-sm font-light leading-relaxed">
+                            Osa Menor 3744-c, La Calma<br />
+                            45070, Zapopan, Jalisco
+                        </span>
+                    </a>
+                    
+                    <a 
+                        href="tel:523314884042" 
+                        class="flex items-center gap-3 group text-custom-piel/80 dark:text-custom-beige/80 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300"
+                    >
+                        <PhoneIcon className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
+                        <span class="text-xs md:text-sm font-light">331 488 4042</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services Section -->
+            <div class="flex flex-col items-center md:items-start gap-4 md:gap-6">
+                <h3 class="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-custom-piel/50 dark:text-custom-beige/50 font-fira">
+                    Servicios
+                </h3>
+                <nav class="flex flex-col items-center md:items-start gap-2 md:gap-3">
+                    {services.map((item) => (
+                        <a 
+                            href={item.href}
+                            class="text-xs md:text-sm font-light text-custom-piel/70 dark:text-custom-beige/70 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300"
+                        >
+                            {item.name}
+                        </a>
+                    ))}
+                </nav>
+            </div>
+
+            <!-- Navigation Section -->
+            <div class="flex flex-col items-center md:items-start gap-4 md:gap-6">
+                <h3 class="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-custom-piel/50 dark:text-custom-beige/50 font-fira">
+                    Explorar
+                </h3>
+                <nav class="flex flex-col items-center md:items-start gap-2 md:gap-3">
+                    {navigation.map((item) => (
+                        <a 
+                            href={item.href}
+                            class="text-xs md:text-sm font-light text-custom-piel/70 dark:text-custom-beige/70 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300"
+                        >
+                            {item.name}
+                        </a>
+                    ))}
+                </nav>
+            </div>
+
+            <!-- Social Section -->
+            <div class="flex flex-col items-center lg:items-end gap-4 md:gap-6">
+                <h3 class="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-custom-piel/50 dark:text-custom-beige/50 font-fira">
+                    Síguenos
+                </h3>
+                <div class="flex items-center gap-4">
+                    <a
+                        href="https://www.instagram.com/luminaestudio.gdl/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="p-2 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group"
+                        aria-label="Instagram"
+                    >
+                        <InstagramSvg
+                            width={18}
+                            height={18}
+                            class="fill-custom-piel dark:fill-custom-beige transition-transform duration-300 group-hover:scale-110 md:w-5 md:h-5"
+                        />
+                    </a>
+                    <a
+                        href="https://www.tiktok.com/@lumina.estudio.ls"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="p-2 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group"
+                        aria-label="TikTok"
+                    >
+                        <TiktokSvg
+                            width={18}
+                            height={18}
+                            class="fill-custom-piel dark:fill-custom-beige transition-transform duration-300 group-hover:scale-110 md:w-5 md:h-5"
+                        />
+                    </a>
+                    <a
+                        href="https://www.facebook.com/luminaEstudioLasergdl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="p-2 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group"
+                        aria-label="Facebook"
+                    >
+                        <FacebookSvg
+                            width={18}
+                            height={18}
+                            class="fill-custom-piel dark:fill-custom-beige transition-transform duration-300 group-hover:scale-110 md:w-5 md:h-5"
+                        />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-6 md:pt-8 border-t border-custom-piel/10 dark:border-custom-beige/10 flex flex-col items-center md:flex-row md:justify-between gap-4">
+            <span class="text-[10px] md:text-sm font-light tracking-wide text-custom-piel/50 dark:text-custom-beige/50 text-center">
+                &copy; {year} Lumina Estudio Láser GDL. <br class="md:hidden" /> Todos los derechos reservados.
+            </span>
+            <div class="flex gap-6">
+                <a
+                    href="https://luminaestudiolaser.com/"
+                    class="text-[10px] md:text-xs font-medium text-custom-piel/60 dark:text-custom-beige/60 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300"
+                >
+                    Sitio Principal
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
