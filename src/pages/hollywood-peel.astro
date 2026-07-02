@@ -16,7 +16,7 @@ import {
 
 import ComoFunciona from "../components/hollywood-peel/ComoFunciona.astro";
 
-import Costos from "../components/hollywood-peel/CuantoCuesta.astro";
+import Costos from "../components/hollywood-peel/CuantoCuesta.jsx";
 
 import Galeria from "../components/hollywood-peel/Galeria.jsx";
 
@@ -54,13 +54,15 @@ export const seo = {
         "Lumina Estudio Laser | Elimina manchas y pigmentación no deseada con nuestros tratamientos avanzados de despigmentación.",
     canonical: "https://luminaestudiolaser.com/hollywood-peel/",
 };
+
+
 ---
 
 <Layout seo={seo}>
     <Body>
         <InnerMenu title="Hollywood Peel" menuItems={menuItems} />
         <ComoFunciona />
-        <Costos />
+        <Costos astroUrl={Astro.url.href} client:load />
         <!--<Galeria client:visible />-->
         <PreguntasFrecuentes />
     </Body>

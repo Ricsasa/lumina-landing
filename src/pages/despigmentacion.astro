@@ -16,7 +16,7 @@ import {
 
 import ComoFunciona from "../components/despigmentacion/ComoFunciona.astro";
 
-import Costos from "../components/despigmentacion/CuantoCuesta.astro";
+import Costos from "../components/despigmentacion/CuantoCuesta.jsx";
 
 import Galeria from "../components/despigmentacion/Galeria.jsx";
 
@@ -61,7 +61,7 @@ export const seo = {
             menuItems={menuItems}
         />
         <ComoFunciona />
-        <Costos />
+        <Costos astroUrl={Astro.url.href} client:load />
         <Galeria client:visible />
         <PreguntasFrecuentes />
     </Body>

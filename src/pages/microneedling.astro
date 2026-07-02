@@ -17,7 +17,7 @@ import {
 
 import ComoFunciona from "../components/microneedling/ComoFunciona.astro";
 
-import Costos from "../components/microneedling/CuantoCuesta.astro";
+import Costos from "../components/microneedling/CuantoCuesta.jsx";
 
 import Galeria from "../components/microneedling/Galeria.jsx";
 
@@ -67,7 +67,7 @@ export const seo = {
         <InnerMenu title="Microneedling (Dermapen)" menuItems={menuItems} />
         <ComoFunciona />
         <QueIncluye />
-        <Costos />
+        <Costos astroUrl={Astro.url.href} client:load />
         <Galeria client:visible />
         <PreguntasFrecuentes />
     </Body>

@@ -16,7 +16,7 @@ import {
 
 import ComoFunciona from "../components/eliminacion-micropigmentacion/ComoFunciona.astro";
 
-import Costos from "../components/eliminacion-micropigmentacion/CuantoCuesta.astro";
+import Costos from "../components/eliminacion-micropigmentacion/CuantoCuesta.jsx";
 
 import Galeria from "../components/eliminacion-micropigmentacion/Galeria.jsx";
 
@@ -61,7 +61,7 @@ export const seo = {
             menuItems={menuItems}
         />
         <ComoFunciona />
-        <Costos />
+        <Costos astroUrl={Astro.url.href} client:load />
         <Galeria client:visible />
         <PreguntasFrecuentes />
     </Body>
