@@ -3,7 +3,8 @@ import PriceCard from "../common/PriceCard.astro";
 import WhatsappWhite from "../../assets/external/whatsapp-white.svg";
 import { Image } from "astro:assets";
 
-import precios from "./precios.json"
+const res = await fetch(new URL("/precios.json", Astro.url));
+const data = await res.json();
 
 const whatsappMessage =
     "Hola, estoy interesado en servicios personalizados de microneedling.";
@@ -35,7 +36,7 @@ const whatsappMessage =
             title="Microneedling"
             description="Sesión completa con peptonas + terapia de luz roja."
         >
-            ${Number(precios.unica).toLocaleString()} por sesión
+            ${Number(data.microneedling.unica).toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -46,10 +47,10 @@ const whatsappMessage =
                 <span
                     class="text-custom-piel dark:text-custom-beige line-through"
                 >
-                    ${Number(precios.paquete4Sesiones.normal).toLocaleString()}
+                    ${Number(data.microneedling.paquete4Sesiones.normal).toLocaleString()}
                 </span>&nbsp;
                 <span class="text-custom-piel dark:text-custom-beige">
-                    ${Number(precios.paquete4Sesiones.descuento).toLocaleString()}
+                    ${Number(data.microneedling.paquete4Sesiones.descuento).toLocaleString()}
                 </span>
             </>
         </PriceCard>

@@ -1,6 +1,8 @@
 ---
 import PriceCard from "../common/PriceCard.astro";
-import precios from "./precios.json"
+
+const res = await fetch(new URL("/precios.json", Astro.url));
+const data = await res.json();
 ---
 
 <section
@@ -28,7 +30,7 @@ import precios from "./precios.json"
             description="Eliminación de microblading o micropigmentación de cejas."
             pricePrefix
         >
-            ${Number(precios.cejas).toLocaleString()} por sesión
+            ${Number(data.micropigmentacion.cejas).toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -36,7 +38,7 @@ import precios from "./precios.json"
             description="Eliminación de delineado de ojos."
             pricePrefix
         >
-            ${Number(precios.ojos).toLocaleString()} por sesión
+            ${Number(data.micropigmentacion.ojos).toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -44,7 +46,7 @@ import precios from "./precios.json"
             description="Eliminación de delineado de labios o full color."
             pricePrefix
         >
-            ${Number(precios.labios).toLocaleString()} por sesión
+            ${Number(data.micropigmentacion.labios).toLocaleString()} por sesión
         </PriceCard>
     </div>
 </section>

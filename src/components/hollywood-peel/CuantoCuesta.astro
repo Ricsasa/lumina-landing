@@ -1,7 +1,8 @@
 ---
 import PriceCard from "../common/PriceCard.astro";
 
-import precios from "./precios.json"
+const res = await fetch(new URL("/precios.json", Astro.url));
+const data = await res.json();
 ---
 
 <section
@@ -31,7 +32,7 @@ import precios from "./precios.json"
             description="Ideal para probar el tratamiento de Hollywood Peel."
             pricePrefix
         >
-            ${Number(precios.unica).toLocaleString()}
+            ${Number(data.hollywood.unica).toLocaleString()}
         </PriceCard>
 
         <PriceCard
@@ -42,10 +43,10 @@ import precios from "./precios.json"
                 <span
                     class="text-custom-piel dark:text-custom-beige line-through"
                 >
-                    ${Number(precios.paquete4Sesiones.normal).toLocaleString()}
+                    ${Number(data.hollywood.paquete4Sesiones.normal).toLocaleString()}
                 </span>&nbsp;
                 <span class="text-custom-piel dark:text-custom-beige">
-                    ${Number(precios.paquete4Sesiones.descuento).toLocaleString()}
+                    ${Number(data.hollywood.paquete4Sesiones.descuento).toLocaleString()}
                 </span>
             </>
         </PriceCard>
@@ -58,10 +59,10 @@ import precios from "./precios.json"
                 <span
                     class="text-custom-piel dark:text-custom-beige line-through"
                 >
-                    ${precios.paquete6Sesiones.normal.toLocaleString()}
+                    ${data.hollywood.paquete6Sesiones.normal.toLocaleString()}
                 </span>&nbsp;
                 <span class="text-custom-piel dark:text-custom-beige">
-                    ${precios.paquete6Sesiones.descuento.toLocaleString()}
+                    ${data.hollywood.paquete6Sesiones.descuento.toLocaleString()}
                 </span>
             </>
         </PriceCard>
