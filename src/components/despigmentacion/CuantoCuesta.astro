@@ -34,7 +34,7 @@ const whatsappMessage =
             description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en el rostro."
             pricePrefix
         >
-            ${precios.rostro.toLocaleString()} por sesión
+            ${Number(precios.rostro).toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -42,7 +42,7 @@ const whatsappMessage =
             description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en las axilas."
             pricePrefix
         >
-            ${precios.axilas.toLocaleString} por sesión
+            ${Number(precios.axilas).toLocaleString} por sesión
         </PriceCard>
 
         <PriceCard
@@ -50,7 +50,7 @@ const whatsappMessage =
             description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en las manos."
             pricePrefix
         >
-            ${precios.manos.toLocaleString()} por sesión
+            ${Number(precios.manos).toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -61,10 +61,10 @@ const whatsappMessage =
                 <span
                     class="text-custom-piel dark:text-custom-beige line-through"
                 >
-                    ${precios.paquete4Sesiones.normal.toLocaleString()}
+                    ${Number(precios.paquete4Sesiones.normal).toLocaleString()}
                 </span>&nbsp;
                 <span class="text-custom-piel dark:text-custom-beige">
-                    ${precios.paquete4Sesiones.descuento.toLocaleString()}
+                    ${Number(precios.paquete4Sesiones.descuento).toLocaleString()}
                 </span>
             </>
         </PriceCard>

@@ -28,7 +28,7 @@ import precios from "./precios.json"
             description="Eliminación de microblading o micropigmentación de cejas."
             pricePrefix
         >
-            ${precios.cejas.toLocaleString()} por sesión
+            ${Number(precios.cejas).toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -36,7 +36,7 @@ import precios from "./precios.json"
             description="Eliminación de delineado de ojos."
             pricePrefix
         >
-            ${precios.ojos.toLocaleString()} por sesión
+            ${Number(precios.ojos).toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -44,7 +44,7 @@ import precios from "./precios.json"
             description="Eliminación de delineado de labios o full color."
             pricePrefix
         >
-            ${precios.labios.toLocaleString()} por sesión
+            ${Number(precios.labios).toLocaleString()} por sesión
         </PriceCard>
     </div>
 </section>

@@ -31,7 +31,7 @@ import precios from "./precios.json"
             description="Ideal para probar el tratamiento de Hollywood Peel."
             pricePrefix
         >
-            ${precios.unica.toLocaleString()}
+            ${Number(precios.unica).toLocaleString()}
         </PriceCard>
 
         <PriceCard
@@ -42,10 +42,10 @@ import precios from "./precios.json"
                 <span
                     class="text-custom-piel dark:text-custom-beige line-through"
                 >
-                    ${precios.paquete4Sesiones.normal.toLocaleString()}
+                    ${Number(precios.paquete4Sesiones.normal).toLocaleString()}
                 </span>&nbsp;
                 <span class="text-custom-piel dark:text-custom-beige">
-                    ${precios.paquete4Sesiones.descuento.toLocaleString()}
+                    ${Number(precios.paquete4Sesiones.descuento).toLocaleString()}
                 </span>
             </>
         </PriceCard>

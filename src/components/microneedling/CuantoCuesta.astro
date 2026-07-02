@@ -35,7 +35,7 @@ const whatsappMessage =
             title="Microneedling"
             description="Sesión completa con peptonas + terapia de luz roja."
         >
-            ${precios.unica.toLocaleString()} por sesión
+            ${Number(precios.unica).toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -46,10 +46,10 @@ const whatsappMessage =
                 <span
                     class="text-custom-piel dark:text-custom-beige line-through"
                 >
-                    ${precios.paquete4Sesiones.normal.toLocaleString()}
+                    ${Number(precios.paquete4Sesiones.normal).toLocaleString()}
                 </span>&nbsp;
                 <span class="text-custom-piel dark:text-custom-beige">
-                    ${precios.paquete4Sesiones.descuento.toLocaleString()}
+                    ${Number(precios.paquete4Sesiones.descuento).toLocaleString()}
                 </span>
             </>
         </PriceCard>
