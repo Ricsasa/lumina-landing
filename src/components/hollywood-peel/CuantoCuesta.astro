@@ -1,5 +1,7 @@
 ---
 import PriceCard from "../common/PriceCard.astro";
+
+import precios from "./precios.json"
 ---
 
 <section
@@ -29,7 +31,7 @@ import PriceCard from "../common/PriceCard.astro";
             description="Ideal para probar el tratamiento de Hollywood Peel."
             pricePrefix
         >
-            $1,000
+            ${precios.unica.toLocaleString()}
         </PriceCard>
 
         <PriceCard
@@ -40,10 +42,10 @@ import PriceCard from "../common/PriceCard.astro";
                 <span
                     class="text-custom-piel dark:text-custom-beige line-through"
                 >
-                    $4,000
+                    ${precios.paquete4Sesiones.normal.toLocaleString()}
                 </span>&nbsp;
                 <span class="text-custom-piel dark:text-custom-beige">
-                    $3,200
+                    ${precios.paquete4Sesiones.descuento.toLocaleString()}
                 </span>
             </>
         </PriceCard>
@@ -56,10 +58,10 @@ import PriceCard from "../common/PriceCard.astro";
                 <span
                     class="text-custom-piel dark:text-custom-beige line-through"
                 >
-                    $6,000
+                    ${precios.paquete6Sesiones.normal.toLocaleString()}
                 </span>&nbsp;
                 <span class="text-custom-piel dark:text-custom-beige">
-                    $4,200
+                    ${precios.paquete6Sesiones.descuento.toLocaleString()}
                 </span>
             </>
         </PriceCard>

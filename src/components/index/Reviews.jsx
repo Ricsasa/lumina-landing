@@ -180,7 +180,7 @@ const Reviews = () => {
                     }
                 ],
                 rating: 5,
-                user_ratings_total: 29
+                user_ratings_total: 31
             }
         }
     }
@@ -196,12 +196,12 @@ const Reviews = () => {
             <div className="py-8 mx-auto lg:py-16">
                 <div className="mx-auto max-w-screen-sm text-center mb-12">
                     <h2
-                        class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+                        className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
                     >
                         Reseñas
                     </h2>
                     <p
-                        class="mt-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light"
+                        className="mt-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light"
                     >
                         Descubre lo que nuestros clientes opinan de nuestros servicios.
                     </p>
@@ -226,7 +226,7 @@ const Reviews = () => {
 const Review = ({ review }) => {
     const { author_name, rating, relative_time_description, text } = review
     return (
-        <div className="flex flex-col w-[350px] h-[220px] p-6 mx-4 bg-white dark:bg-custom-beige/5 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 backdrop-blur-sm">
+        <div className="flex flex-col w-[350px] h-full p-6 mx-4 bg-white dark:bg-custom-beige/5 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 backdrop-blur-sm">
             <div className="flex items-center mb-4">
                 <div className="flex">
                     {[...Array(5)].map((_, i) => (

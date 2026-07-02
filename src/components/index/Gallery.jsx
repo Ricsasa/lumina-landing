@@ -23,12 +23,12 @@ const Gallery = () => {
             <div className="py-8 mx-auto lg:py-16">
                 <div className="mx-auto max-w-screen-sm text-center mb-12">
                     <h2
-                        class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
+                        className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
                     >
                         Galería
                     </h2>
                     <p
-                        class="mt-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light"
+                        className="mt-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light"
                     >
                         ¡Ve algunos de nuestros resultados!
                     </p>

@@ -1,0 +1,11 @@
+{
+    "unica": 1000,
+    "paquete4Sesiones":{
+        "normal": 4000,
+        "descuento": 3200
+    },
+    "paquete6Sesiones":{
+        "normal": 6000,
+        "descuento": 4200
+    }
+}

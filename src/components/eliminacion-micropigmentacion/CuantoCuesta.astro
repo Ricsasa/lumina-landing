@@ -1,5 +1,6 @@
 ---
 import PriceCard from "../common/PriceCard.astro";
+import precios from "./precios.json"
 ---
 
 <section
@@ -27,7 +28,7 @@ import PriceCard from "../common/PriceCard.astro";
             description="Eliminación de microblading o micropigmentación de cejas."
             pricePrefix
         >
-            $700 por sesión
+            ${precios.cejas.toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -35,7 +36,7 @@ import PriceCard from "../common/PriceCard.astro";
             description="Eliminación de delineado de ojos."
             pricePrefix
         >
-            $900 por sesión
+            ${precios.ojos.toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -43,7 +44,7 @@ import PriceCard from "../common/PriceCard.astro";
             description="Eliminación de delineado de labios o full color."
             pricePrefix
         >
-            $700 por sesión
+            ${precios.labios.toLocaleString()} por sesión
         </PriceCard>
     </div>
 </section>

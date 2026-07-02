@@ -3,6 +3,8 @@ import PriceCard from "../common/PriceCard.astro";
 import WhatsappWhite from "../../assets/external/whatsapp-white.svg";
 import { Image } from "astro:assets";
 
+import precios from "./precios.json"
+
 const whatsappMessage =
     "Hola, estoy interesado en sus servicios de despigmentación.";
 ---
@@ -32,7 +34,7 @@ const whatsappMessage =
             description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en el rostro."
             pricePrefix
         >
-            $700 por sesión
+            ${precios.rostro.toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -40,7 +42,7 @@ const whatsappMessage =
             description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en las axilas."
             pricePrefix
         >
-            $700 por sesión
+            ${precios.axilas.toLocaleString} por sesión
         </PriceCard>
 
         <PriceCard
@@ -48,7 +50,7 @@ const whatsappMessage =
             description="Tratamiento especializado para eliminar manchas y pigmentación no deseada en las manos."
             pricePrefix
         >
-            $700 por sesión
+            ${precios.manos.toLocaleString()} por sesión
         </PriceCard>
 
         <PriceCard
@@ -59,10 +61,10 @@ const whatsappMessage =
                 <span
                     class="text-custom-piel dark:text-custom-beige line-through"
                 >
-                    $2,800
+                    ${precios.paquete4Sesiones.normal.toLocaleString()}
                 </span>&nbsp;
                 <span class="text-custom-piel dark:text-custom-beige">
-                    $2,520
+                    ${precios.paquete4Sesiones.descuento.toLocaleString()}
                 </span>
             </>
         </PriceCard>
