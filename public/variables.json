@@ -1,0 +1,43 @@
+{
+    "despigmentacion": {
+        "rostro": 700,
+        "axilas": 900,
+        "manos": 700,
+        "paquete4Sesiones": {
+            "normal": 2800,
+            "descuento": 2520
+        }
+    },
+    "hollywood": {
+        "unica": 1000,
+        "paquete4Sesiones": {
+            "normal": 4000,
+            "descuento": 3200
+        },
+        "paquete6Sesiones": {
+            "normal": 6000,
+            "descuento": 4200
+        }
+    },
+    "microneedling": {
+        "unica": 1200,
+        "paquete4Sesiones": {
+            "normal": 4800,
+            "descuento": 4320
+        }
+    },
+    "micropigmentacion": {
+        "cejas": 700,
+        "ojos": 900,
+        "labios": 700
+    },
+    "tatuajes":{
+        "rateBase": 500
+    },
+    "telefonoWhatsapp": "523314884042",
+    "telefonoLlamadas": "331 488 4042",
+    "direccion": "Osa Menor 3744-c, La Calma, CP 45070, Zapopan, Jalisco",
+    "googleMapsLink": "https://maps.app.goo.gl/oHGPfz5yCKV8uaas6",
+    "googleMapsLocation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.838113524611!2d-103.41961868784156!3d20.63545440108885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ac0681e7d5675af%3A0xb1cbbe507bc95e60!2sLumina%20estudio%20l%C3%A1ser!5e0!3m2!1ses!2smx!4v1771544943218!5m2!1ses!2smx",
+    "moovitLocation": "https://moovitapp.com/index/es-419/transporte_p%C3%BAblico-La_Calma-Guadalajara-stop_8325546-2900"
+}

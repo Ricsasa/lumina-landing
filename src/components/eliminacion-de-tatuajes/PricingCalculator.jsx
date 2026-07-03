@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import WhatsappWhite from '../../assets/external/whatsapp-white.svg';
 
-export default function PricingCalculator() {
+export default function PricingCalculator({ astroUrl }) {
     const [alto, setAlto] = useState('');
     const [ancho, setAncho] = useState('');
     const [tinta, setTinta] = useState('negra');
@@ -9,6 +9,20 @@ export default function PricingCalculator() {
     const [resultado, setResultado] = useState(null);
     const [rate, setRate] = useState(0);
     const [whatsappMessage, setWhatsappMessage] = useState('')
+    const [variables, setVariables] = useState(null);
+
+    useEffect(() => {
+        async function getVariables() {
+            const res = await fetch(new URL("/variables.json", astroUrl));
+            const data = await res.json();
+            setVariables(data);
+        }
+
+        getVariables();
+    }, [astroUrl]);
+
+    const rateBase = Number(variables?.tatuajes?.rateBase || 500);
+    const telefonoWhatsapp = variables?.telefonoWhatsapp || "523314884042";
 
     const validate = () => {
         let valid = true;
@@ -39,10 +53,10 @@ export default function PricingCalculator() {
         let precioStr = "";
 
         if (area < 25) {
-            precioStr = "$500 - $600";
-            setRate(500)
+            precioStr = `$${rateBase} - $${rateBase + 100}`;
+            setRate(rateBase)
         } else if (area >= 25) {
-            const rate = area * 5 + 500
+            const rate = area * 5 + rateBase
             setRate(rate)
             precioStr = `$${rate} - $${(rate + 100)}`;
         }
@@ -162,7 +176,7 @@ export default function PricingCalculator() {
                         </p>
                     </div>
                     <a
-                        href={`https://wa.me/523314884042?text=${encodeURIComponent(whatsappMessage)}`}
+                        href={`https://wa.me/${telefonoWhatsapp}?text=${encodeURIComponent(whatsappMessage)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-6 flex items-center justify-center gap-2 bg-custom-whatsapp-green text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"

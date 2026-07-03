@@ -9,7 +9,7 @@ import Hero from "../components/index/Hero.astro";
 import Services from "../components/index/Services.astro";
 import Gallery from "../components/index/Gallery.jsx";
 import Reviews from "../components/index/Reviews.jsx";
-import Location from "../components/index/Location.astro";
+import Location from "../components/index/Location.jsx";
 ---
 
 <Layout>
@@ -18,6 +18,6 @@ import Location from "../components/index/Location.astro";
         <Services />
         <Gallery client:only="react" />
         <Reviews client:only="react" />
-        <Location />
+        <Location astroUrl={Astro.url.href} client:load />
     </Body>
 </Layout>

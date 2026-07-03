@@ -11,7 +11,7 @@ export default function CuantoCuesta({ astroUrl }) {
 
     useEffect(() => {
         async function getPrices() {
-            const res = await fetch(new URL("/precios.json", astroUrl));
+            const res = await fetch(new URL("/variables.json", astroUrl));
             const data = await res.json();
             setData(data);
         }
@@ -20,6 +20,7 @@ export default function CuantoCuesta({ astroUrl }) {
     }, [astroUrl]);
 
     const despigmentacion = data?.despigmentacion;
+    const telefonoWhatsapp = data?.telefonoWhatsapp || "523314884042";
 
     return (
         <section
@@ -90,7 +91,7 @@ export default function CuantoCuesta({ astroUrl }) {
                 </p>
                 <div className="max-w-3/4 mx-auto flex items-center justify-center gap-2">
                     <a
-                        href={`https://wa.me/523314884042?text=${encodeURIComponent(whatsappMessage)}`}
+                        href={`https://wa.me/${telefonoWhatsapp}?text=${encodeURIComponent(whatsappMessage)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-6 flex items-center justify-center gap-2 bg-custom-whatsapp-green text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"

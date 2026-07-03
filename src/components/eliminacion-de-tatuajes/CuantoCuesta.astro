@@ -25,7 +25,7 @@ import { Image } from "astro:assets";
     </div>
 
     <!-- Pricing Tool -->
-    <PricingCalculator client:load />
+    <PricingCalculator astroUrl={Astro.url.href} client:load />
 
     <div class="mx-auto max-w-3xl text-center">
         <p

@@ -7,7 +7,7 @@ export default function CuantoCuesta({ astroUrl }) {
 
     useEffect(() => {
         async function getPrices() {
-            const res = await fetch(new URL("/precios.json", astroUrl));
+            const res = await fetch(new URL("/variables.json", astroUrl));
             const data = await res.json();
             setData(data);
         }
