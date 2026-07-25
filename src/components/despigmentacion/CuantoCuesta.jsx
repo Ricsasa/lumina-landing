@@ -31,7 +31,7 @@ export default function CuantoCuesta({ astroUrl }) {
                 <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira">
                     ¿Cuánto cuesta?
                 </h2>
-                <p className="mt-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light px-4">
+                <p className="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light px-4">
                     Conoce nuestros precios y paquetes.
                 </p>
             </div>

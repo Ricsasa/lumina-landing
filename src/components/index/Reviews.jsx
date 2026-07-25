@@ -180,7 +180,7 @@ const Reviews = () => {
                     }
                 ],
                 rating: 5,
-                user_ratings_total: 31
+                user_ratings_total: 32
             }
         }
     }
@@ -201,7 +201,7 @@ const Reviews = () => {
                         Reseñas
                     </h2>
                     <p
-                        className="mt-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light"
+                        className="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light"
                     >
                         Descubre lo que nuestros clientes opinan de nuestros servicios.
                     </p>
@@ -240,7 +240,7 @@ const Review = ({ review }) => {
                 </span>
             </div>
 
-            <p className="grow text-sm md:text-base font-light leading-relaxed text-custom-oscuro dark:text-custom-piel line-clamp-4">
+            <p className="grow text-sm md:text-base font-light leading-relaxed text-custom-oscuro/70 dark:text-custom-piel line-clamp-4">
                 &quot;{text}&quot;
             </p>
 
@@ -274,7 +274,7 @@ const Rating = ({ isPending, data }) => {
                                 ))}
                             </span>
                         </p>
-                        <p className="text-sm md:text-lg font-light tracking-wide text-custom-oscuro dark:text-custom-piel text-center">
+                        <p className="text-sm md:text-lg font-light tracking-wide text-custom-oscuro/70 dark:text-custom-piel text-center">
                             Basado en {total} reseñas
                         </p>
                     </div>

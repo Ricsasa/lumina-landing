@@ -26,6 +26,7 @@ const whatsappMessage =
 export default function Location({ astroUrl }) {
     const [variables, setVariables] = useState(null);
     const imagesRef = useRef([]);
+    const locationRef = useRef(null);
 
     useEffect(() => {
         async function getVariables() {
@@ -36,6 +37,24 @@ export default function Location({ astroUrl }) {
 
         getVariables();
     }, [astroUrl]);
+
+    useEffect(() => {
+        if (!locationRef.current) return;
+
+        let cleanup;
+        let isMounted = true;
+
+        import("../../scripts/cardAnimation").then(({ initCardAnimations }) => {
+            if (isMounted) {
+                cleanup = initCardAnimations(locationRef.current);
+            }
+        });
+
+        return () => {
+            isMounted = false;
+            cleanup?.();
+        };
+    }, []);
 
     useEffect(() => {
         let timeline;
@@ -93,13 +112,13 @@ export default function Location({ astroUrl }) {
                 <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira">
                     Nuestra Ubicación
                 </h2>
-                <p className="mt-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light">
+                <p className="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light">
                     Visítanos en nuestras instalaciones.
                 </p>
             </div>
 
-            <div className="w-[calc(100vw-2em)] max-w-5xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8">
-                <div className="relative w-full md:w-1/3 flex overflow-hidden bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 transition-colors duration-300">
+            <div ref={locationRef} className="w-[calc(100vw-2em)] max-w-5xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8">
+                <div className="gsap-reveal-card relative w-full md:w-1/3 flex overflow-hidden bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 transition-colors duration-300">
                     {facilities.map((facility, index) => (
                         <img
                             key={`${facility.alt}-${index}`}
@@ -115,7 +134,7 @@ export default function Location({ astroUrl }) {
                     ))}
                 </div>
 
-                <div className="flex flex-col grow gap-8 p-6 md:p-8 lg:p-10 bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 transition-colors duration-300">
+                <div className="gsap-reveal-card flex flex-col grow gap-8 p-6 md:p-8 lg:p-10 bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 transition-colors duration-300">
                     <a
                         href={googleMapsLink}
                         target="_blank"
@@ -131,7 +150,7 @@ export default function Location({ astroUrl }) {
                                 <h3 className="text-lg font-medium text-custom-piel dark:text-custom-beige mb-1 font-fira group-hover:underline">
                                     Lumina Estudio Láser
                                 </h3>
-                                <p className="text-sm md:text-base text-custom-oscuro dark:text-custom-piel font-light leading-relaxed whitespace-pre-line text-left">
+                                <p className="text-sm md:text-base text-custom-oscuro/70 dark:text-custom-piel font-light leading-relaxed whitespace-pre-line text-left">
                                     {direccion}
                                 </p>
                             </div>

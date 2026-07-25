@@ -31,7 +31,7 @@ export default function CuantoCuesta({ astroUrl }) {
                 <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira">
                     ¿Cuánto cuesta?
                 </h2>
-                <p className="mt-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light px-4">
+                <p className="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light px-4">
                     Conoce nuestros precios y paquetes.
                 </p>
             </div>
@@ -78,7 +78,7 @@ export default function CuantoCuesta({ astroUrl }) {
                         className="mt-6 flex items-center justify-center gap-2 bg-custom-whatsapp-green text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                     >
                         <img
-                            src={WhatsappWhite}
+                            src={WhatsappWhite.src}
                             alt="WhatsApp Logo"
                             className="w-6 h-6"
                         />

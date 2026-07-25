@@ -18,7 +18,7 @@ import { Image } from "astro:assets";
             ¿Cuánto cuesta?
         </h2>
         <p
-            class="mt-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light px-4"
+            class="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light px-4"
         >
             Conoce nuestros precios y paquetes.
         </p>
@@ -27,9 +27,9 @@ import { Image } from "astro:assets";
     <!-- Pricing Tool -->
     <PricingCalculator astroUrl={Astro.url.href} client:load />
 
-    <div class="mx-auto max-w-3xl text-center">
+    <div class="gsap-reveal-card mx-auto max-w-3xl text-center">
         <p
-            class="my-4 text-base md:text-lg text-custom-oscuro dark:text-custom-piel font-light px-4"
+            class="my-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light px-4"
         >
             ¿No sabes cuanto mide tu tatuaje? Usa esta guia visual para estimar
             su tamaño.

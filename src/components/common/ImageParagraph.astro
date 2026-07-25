@@ -22,7 +22,7 @@ const textOrder = isLeft ? "order-1 md:order-2" : "order-1 md:order-1";
 const imageOrder = isLeft ? "order-2 md:order-1" : "order-2 md:order-2";
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+<div class="gsap-reveal-card grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
     <div class={`flex flex-col justify-center ${textOrder}`}>
         {
             title && (
@@ -32,7 +32,7 @@ const imageOrder = isLeft ? "order-2 md:order-1" : "order-2 md:order-2";
             )
         }
         <p
-            class="text-sm md:text-lg text-custom-oscuro dark:text-custom-piel font-light text-justify leading-loose"
+            class="text-sm md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light text-justify leading-loose"
         >
             <slot />
         </p>

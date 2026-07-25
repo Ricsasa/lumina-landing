@@ -12,7 +12,7 @@ const { items } = Astro.props;
 <div class="w-full max-w-3xl mx-auto flex flex-col gap-4">
     {
         items.map((item) => (
-            <details class="group rounded-2xl md:rounded-[32px] bg-custom-beige-light dark:bg-custom-oscuro shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 hover:dark:border-custom-beige/40 transition-colors duration-300 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+            <details class="gsap-reveal-card group rounded-2xl md:rounded-[32px] bg-custom-beige-light dark:bg-custom-oscuro shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 hover:dark:border-custom-beige/40 transition-colors duration-300 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
                 <summary class="flex items-center justify-between gap-4 p-6 md:p-8 cursor-pointer select-none">
                     <h3 class="text-md md:text-lg font-medium text-custom-piel dark:text-custom-beige font-fira">
                         {item.title}
@@ -36,7 +36,7 @@ const { items } = Astro.props;
                     </div>
                 </summary>
 
-                <div class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-sm md:text-base text-custom-oscuro dark:text-custom-piel font-light leading-loose">
+                <div class="px-6 md:px-8 pb-6 md:pb-8 pt-0 text-sm md:text-base text-custom-oscuro/70 dark:text-custom-piel font-light leading-loose">
                     {typeof item.description === "string" ? (
                         <p class="text-justify">{item.description}</p>
                     ) : (
