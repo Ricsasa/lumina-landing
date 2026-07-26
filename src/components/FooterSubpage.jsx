@@ -220,16 +220,6 @@ export default function FooterSubpage({ astroUrl }) {
                         </a>
                     </div>
                 </div>
-                <div class="mt-10 pt-6 border-t border-custom-piel/10 dark:border-custom-beige/10 text-center">
-                    <a
-                        href="https://rs-studio.dev"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-[10px] font-light tracking-wide text-custom-piel/50 dark:text-custom-beige/50 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300"
-                    >
-                        Made by rs-studio.dev
-                    </a>
-                </div>
             </div>
         </footer>
     );
