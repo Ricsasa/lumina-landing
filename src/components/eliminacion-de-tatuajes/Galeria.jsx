@@ -21,6 +21,7 @@ import MayteB from "../../assets/services/tattoos/sliders/MayteB.avif"
 
 import ErnestoA from "../../assets/services/tattoos/sliders/ErnestoA.avif"
 import ErnestoB from "../../assets/services/tattoos/sliders/ErnestoB.avif"
+import SectionHeading from "../common/SectionHeading.jsx";
 
 export default function Galeria() {
     const galleryRef = useRef(null);
@@ -43,23 +44,14 @@ export default function Galeria() {
 
     return (
         <section
-            className="flex flex-col items-center scroll-mt-28 py-20 w-full"
+            className="flex flex-col items-center px-4 md:px-6 scroll-mt-36 md:scroll-mt-40 py-20 w-full"
             id="galeria"
         >
-            <div className="mx-auto max-w-3xl text-center mb-12 px-6">
-                <h2
-                    className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
-                >
-                    Galería
-                </h2>
-                <p
-                    className="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light"
-                >
-                    ¡Ve algunos de nuestros resultados!
-                </p>
-            </div>
+            <SectionHeading title="Galería"
+                subtitle="¡Ve algunos de nuestros resultados!"
+            />
 
-            <div ref={galleryRef} className="mb-16 w-full px-6 container max-w-6xl mx-auto flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div ref={galleryRef} className="w-full max-w-3xl mx-auto flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-8 items-start">
                 <div className="gsap-reveal-card w-full md:col-span-6">
                     <Slider
                         image1={AleA}

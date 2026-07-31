@@ -85,7 +85,7 @@ export default function Header() {
 
             {/* Sidebar Drawer */}
             <aside
-                className={`fixed top-0 right-0 h-full w-full sm:w-[400px] md:w-1/2 bg-custom-beige-light dark:bg-custom-oscuro shadow-2xl z-120 transform transition-transform duration-300 ease-in-out sm:rounded-l-[32px] border-l border-custom-piel/10 dark:border-custom-beige/10 flex flex-col
+                className={`fixed top-0 right-0 h-full w-full sm:w-[400px] md:w-1/2 bg-custom-beige-light dark:bg-custom-oscuro shadow-2xl z-120 transform transition-transform duration-300 ease-in-out sm:rounded-l-4xl border-l border-custom-piel/10 dark:border-custom-beige/10 flex flex-col
                 ${isOpen ? 'translate-x-0' : 'translate-x-full'} 
                 `}
             >

@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import Slider from '../common/Slider.jsx';
+import ImageCard from '../common/ImageCard.jsx';
 import Axilas from "../../assets/gallery/axilas.avif"
 
 import PechoA from "../../assets/services/despigmentacion/PechoA.avif"
 import PechoB from "../../assets/services/despigmentacion/PechoB.avif"
+import SectionHeading from "../common/SectionHeading.jsx";
 
 export default function Galeria() {
     const galleryRef = useRef(null);
@@ -26,31 +28,18 @@ export default function Galeria() {
 
     return (
         <section
-            className="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+            className="flex flex-col items-center px-4 md:px-6 scroll-mt-36 md:scroll-mt-40 py-20 w-full"
             id="galeria"
         >
-            <div className="mx-auto max-w-3xl text-center mb-12">
-                <h2
-                    className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
-                >
-                    Galería
-                </h2>
-                <p
-                    className="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light px-4"
-                >
-                    Ver nuestros resultados.
-                </p>
-            </div>
+            <SectionHeading title="Galería"
+                subtitle="Ver nuestros resultados."
+            />
 
-            <div ref={galleryRef} className="mb-16 w-full px-6 container max-w-6xl mx-auto flex flex-col gap-6 lg:gap-8 items-center">
-                <div className="gsap-reveal-card w-full md:col-span-6 md:mt-10 flex justify-center">
-                    <img
-                        src={Axilas.src}
-                        alt="Axilas"
-                        className="w-1/2"
-                    />
+            <div ref={galleryRef} className="w-full max-w-3xl mx-auto flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-8 items-start">
+                <div className="gsap-reveal-card w-full md:col-span-6">
+                    <ImageCard src={Axilas.src} alt="Axilas" />
                 </div>
-                <div className="gsap-reveal-card w-full md:col-span-6 md:mt-10 flex justify-center">
+                <div className="gsap-reveal-card w-full md:col-span-6">
                     <Slider
                         image1={PechoA}
                         image2={PechoB}

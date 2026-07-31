@@ -103,7 +103,7 @@ export default function FooterSubpage({ astroUrl }) {
                                 href="https://maps.app.goo.gl/oHGPfz5yCKV8uaas6"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-start gap-3 group text-custom-piel/80 dark:text-custom-beige/80 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300 text-center md:text-left"
+                                className="flex items-start gap-3 group rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-piel/50 text-custom-piel/80 dark:text-custom-beige/80 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300 text-center md:text-left"
                             >
                                 <MapPinIcon className="w-4 h-4 md:w-5 md:h-5 mt-1 shrink-0" />
                                 <span className="text-xs md:text-sm font-light leading-relaxed">
@@ -113,7 +113,7 @@ export default function FooterSubpage({ astroUrl }) {
 
                             <a
                                 href={`tel:${telefonoWhatsapp}`}
-                                className="flex items-center gap-3 group text-custom-piel/80 dark:text-custom-beige/80 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300"
+                                className="flex items-center gap-3 group rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-piel/50 text-custom-piel/80 dark:text-custom-beige/80 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300"
                             >
                                 <PhoneIcon className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
                                 <span className="text-xs md:text-sm font-light">
@@ -132,7 +132,7 @@ export default function FooterSubpage({ astroUrl }) {
                                 <a
                                     key={item.href}
                                     href={item.href}
-                                    className="text-xs md:text-sm font-light text-custom-piel/70 dark:text-custom-beige/70 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300"
+                                    className="text-xs md:text-sm font-light text-custom-piel/70 dark:text-custom-beige/70 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                                 >
                                     {item.name}
                                 </a>
@@ -149,7 +149,7 @@ export default function FooterSubpage({ astroUrl }) {
                                 <a
                                     key={item.href}
                                     href={item.href}
-                                    className="text-xs md:text-sm font-light text-custom-piel/70 dark:text-custom-beige/70 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300"
+                                    className="text-xs md:text-sm font-light text-custom-piel/70 dark:text-custom-beige/70 hover:text-custom-piel dark:hover:text-custom-beige transition-colors duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                                 >
                                     {item.name}
                                 </a>
@@ -166,7 +166,7 @@ export default function FooterSubpage({ astroUrl }) {
                                 href="https://www.instagram.com/luminaestudio.gdl/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-2 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group"
+                                className="p-2 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                                 aria-label="Instagram"
                             >
                                 <InstagramSvg
@@ -179,7 +179,7 @@ export default function FooterSubpage({ astroUrl }) {
                                 href="https://www.tiktok.com/@lumina.estudio.ls"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-2 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group"
+                                className="p-2 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                                 aria-label="TikTok"
                             >
                                 <TiktokSvg
@@ -192,7 +192,7 @@ export default function FooterSubpage({ astroUrl }) {
                                 href="https://www.facebook.com/luminaEstudioLasergdl"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-2 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group"
+                                className="p-2 rounded-full bg-custom-piel/5 dark:bg-custom-beige/5 hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300 group focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                                 aria-label="Facebook"
                             >
                                 <FacebookSvg

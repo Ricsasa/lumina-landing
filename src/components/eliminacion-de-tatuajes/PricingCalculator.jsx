@@ -67,14 +67,14 @@ export default function PricingCalculator({ astroUrl }) {
     };
 
     return (
-        <div className="gsap-reveal-card max-w-6xl mx-2 md:mx-auto bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] p-6 md:p-10 shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 mb-16 px-4">
+        <div className="gsap-reveal-card w-full max-w-6xl mx-auto bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl md:rounded-4xl p-6 md:p-10 shadow-sm hover:shadow-md border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 dark:hover:border-custom-beige/40 transition-all duration-300 mb-16">
             <form onSubmit={calcular} className="flex flex-col gap-6">
                 <div>
-                    <h2
+                    <h3
                         className="text-md md:text-xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
                     >
                         Ingresa las dimensiones de tu tatuaje, envianos un mensaje y comienza tu tratamiento
-                    </h2>
+                    </h3>
                 </div>
                 <div className="flex flex-col md:flex-row gap-6">
                     {/* Alto Input */}
@@ -149,7 +149,7 @@ export default function PricingCalculator({ astroUrl }) {
 
                 <button
                     type="submit"
-                    className="w-full mt-4 py-3.5 rounded-full bg-custom-piel dark:bg-custom-beige text-custom-beige-light dark:text-custom-oscuro/70 font-medium tracking-wide shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.01] active:scale-[0.98]"
+                    className="w-full mt-4 py-3.5 rounded-full bg-custom-piel dark:bg-custom-beige text-custom-beige-light dark:text-custom-oscuro/70 font-medium tracking-wide shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.01] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                 >
                     Obtener estimación
                 </button>
@@ -179,7 +179,7 @@ export default function PricingCalculator({ astroUrl }) {
                         href={`https://wa.me/${telefonoWhatsapp}?text=${encodeURIComponent(whatsappMessage)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-6 flex items-center justify-center gap-2 bg-custom-whatsapp-green text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                        className="mt-6 flex items-center justify-center gap-2 bg-custom-whatsapp-green text-white px-8 py-4 rounded-full font-bold shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                     >
                         <img src={WhatsappWhite.src || WhatsappWhite} alt="WhatsApp Logo" className="w-6 h-6" />
                         ¡Obten una cotización personalizada!

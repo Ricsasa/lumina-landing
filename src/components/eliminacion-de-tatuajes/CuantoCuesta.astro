@@ -4,25 +4,17 @@ import PricingCalculator from "./PricingCalculator.jsx";
 import ManosDark from "../../assets/services/tattoos/manos_dark.avif";
 import ManosLight from "../../assets/services/tattoos/manos_light.avif";
 import { Image } from "astro:assets";
+import SectionHeading from "../common/SectionHeading.astro";
 ---
 
 <section
-    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    class="flex flex-col items-center px-4 md:px-6 scroll-mt-36 md:scroll-mt-40 py-20 w-full"
     id="costos"
 >
     <!-- Section Header -->
-    <div class="mx-auto max-w-3xl text-center mb-12">
-        <h2
-            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
-        >
-            ¿Cuánto cuesta?
-        </h2>
-        <p
-            class="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light px-4"
-        >
-            Conoce nuestros precios y paquetes.
-        </p>
-    </div>
+    <SectionHeading title="¿Cuánto cuesta?"
+        subtitle="Conoce nuestros precios y paquetes."
+    />
 
     <!-- Pricing Tool -->
     <PricingCalculator astroUrl={Astro.url.href} client:load />
@@ -35,7 +27,7 @@ import { Image } from "astro:assets";
             su tamaño.
         </p>
         <div
-            class="flex items-start gap-4 p-6 shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 transition-colors duration-300 rounded-[24px] mb-8"
+            class="flex items-start gap-4 p-6 shadow-sm hover:shadow-md border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 dark:hover:border-custom-beige/40 transition-all duration-300 rounded-3xl mb-8"
         >
             <Image
                 src={ManosDark}

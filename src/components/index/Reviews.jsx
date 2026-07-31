@@ -8,6 +8,7 @@ import { queryClient } from "../../store"
 import GoogleMapsLogo from "../../assets/external/google-maps.svg?react";
 import { StarIcon } from "@heroicons/react/16/solid";
 import { StarIcon as StarIconOutline } from "@heroicons/react/24/outline";
+import SectionHeading from "../common/SectionHeading.jsx";
 
 
 
@@ -189,35 +190,28 @@ const Reviews = () => {
         <Review key={i} review={r} />
     ))
 
+    // Full-bleed exception to the section spec: the horizontal padding lives
+    // on the children instead of the section, so the marquee can run edge to
+    // edge on `w-full` without any vw unit (a vw here overflows the body
+    // wherever scrollbars take layout width).
     return (
         <section
-            className="justify-center md:px-6 scroll-mt-24 py-12 flex flex-col items-center w-full"
+            className="flex flex-col items-center scroll-mt-24 py-20 w-full overflow-x-hidden"
             id="reviews">
-            <div className="py-8 mx-auto lg:py-16">
-                <div className="mx-auto max-w-screen-sm text-center mb-12">
-                    <h2
-                        className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
-                    >
-                        Reseñas
-                    </h2>
-                    <p
-                        className="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light"
-                    >
-                        Descubre lo que nuestros clientes opinan de nuestros servicios.
-                    </p>
-                </div>
-                <div className="w-2/3 md:w-1/2 lg:w-100 mx-auto">
-                    <Rating isPending={false} data={data} />
-                </div>
-                <div className="w-[calc(97vw)]">
-                    <Marquee
-                        className="py-4"
-                        autoFill
-                        pauseOnHover
-                    >
-                        {elements}
-                    </Marquee>
-                </div>
+            <SectionHeading title="Reseñas"
+                subtitle="Descubre lo que nuestros clientes opinan de nuestros servicios."
+            />
+            <div className="w-full max-w-sm mx-auto px-4 md:px-6">
+                <Rating isPending={false} data={data} />
+            </div>
+            <div className="w-full">
+                <Marquee
+                    className="py-4"
+                    autoFill
+                    pauseOnHover
+                >
+                    {elements}
+                </Marquee>
             </div>
         </section>
     )
@@ -226,7 +220,7 @@ const Reviews = () => {
 const Review = ({ review }) => {
     const { author_name, rating, relative_time_description, text } = review
     return (
-        <div className="flex flex-col w-[350px] h-full p-6 mx-4 bg-white dark:bg-custom-beige/5 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 backdrop-blur-sm">
+        <div className="flex flex-col w-[350px] h-full p-6 mx-4 bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl md:rounded-4xl shadow-sm hover:shadow-md transition-all duration-300 border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 dark:hover:border-custom-beige/40">
             <div className="flex items-center mb-4">
                 <div className="flex">
                     {[...Array(5)].map((_, i) => (
@@ -259,10 +253,10 @@ const Rating = ({ isPending, data }) => {
     const isLoading = isPending
 
     return (
-        <a href='https://maps.app.goo.gl/QsCe1PNkZYdcLpfr7' target="_blank" rel="noopener noreferrer" className="group">
-            <div className="mx-auto p-6 mb-8 border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 rounded-[24px] shadow-sm hover:shadow-md bg-white dark:bg-custom-beige/5 backdrop-blur-md items-center transition-all duration-300">
+        <a href='https://maps.app.goo.gl/QsCe1PNkZYdcLpfr7' target="_blank" rel="noopener noreferrer" className="group rounded-2xl md:rounded-4xl focus:outline-none focus:ring-2 focus:ring-custom-piel/50">
+            <div className="mx-auto p-6 mb-8 border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 dark:hover:border-custom-beige/40 rounded-2xl md:rounded-4xl shadow-sm hover:shadow-md bg-custom-beige-light dark:bg-custom-oscuro items-center transition-all duration-300">
                 <div className="flex justify-around gap-8">
-                    <GoogleMapsLogo width={70} className="shrink-0 saturate-50 group-hover:saturate-100 transition-all duration-300" />
+                    <GoogleMapsLogo width={70} className="shrink-0 saturate-60 group-hover:saturate-100 transition-all duration-300" />
                     <div className="flex flex-col justify-center">
                         <p className="flex flex-col lg:flex-row gap-4 pb-2 dark:text-custom-piel font-fira items-center">
                             <span className="text-sm md:text-xl font-medium">{rating} / 5</span>

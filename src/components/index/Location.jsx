@@ -10,6 +10,7 @@ import Facilities2 from "../../assets/facilities/facilities-2.avif";
 import Facilities3 from "../../assets/facilities/facilities-3.avif";
 import Facilities4 from "../../assets/facilities/facilities-4.avif";
 import WhatsappWhite from "../../assets/external/whatsapp-white.svg";
+import SectionHeading from "../common/SectionHeading.jsx";
 
 const facilities = [
     { src: Facilities1, alt: "Interior" },
@@ -105,20 +106,15 @@ export default function Location({ astroUrl }) {
 
     return (
         <section
-            className="flex flex-col items-center md:px-6 scroll-mt-24 py-20 w-full"
+            className="flex flex-col items-center px-4 md:px-6 scroll-mt-24 py-20 w-full"
             id="ubicacion"
         >
-            <div className="mx-auto max-w-3xl text-center mb-12">
-                <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira">
-                    Nuestra Ubicación
-                </h2>
-                <p className="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light">
-                    Visítanos en nuestras instalaciones.
-                </p>
-            </div>
+            <SectionHeading title="Nuestra Ubicación"
+                subtitle="Visítanos en nuestras instalaciones."
+            />
 
-            <div ref={locationRef} className="w-[calc(100vw-2em)] max-w-5xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8">
-                <div className="gsap-reveal-card relative w-full md:w-1/3 flex overflow-hidden bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 transition-colors duration-300">
+            <div ref={locationRef} className="w-full max-w-5xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8">
+                <div className="gsap-reveal-card relative w-full md:w-1/3 flex overflow-hidden bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl md:rounded-4xl shadow-sm hover:shadow-md border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 dark:hover:border-custom-beige/40 transition-all duration-300">
                     {facilities.map((facility, index) => (
                         <img
                             key={`${facility.alt}-${index}`}
@@ -127,22 +123,22 @@ export default function Location({ astroUrl }) {
                             }}
                             src={facility.src.src}
                             alt={facility.alt}
-                            className="gsap-facility-image relative w-full h-auto md:absolute md:top-0 md:left-0 md:h-full object-cover opacity-0 saturate-50"
+                            className="gsap-facility-image relative w-full h-auto md:absolute md:top-0 md:left-0 md:h-full object-cover opacity-0 saturate-60"
                             aria-label={facility.alt}
                             title={facility.alt}
                         />
                     ))}
                 </div>
 
-                <div className="gsap-reveal-card flex flex-col grow gap-8 p-6 md:p-8 lg:p-10 bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 transition-colors duration-300">
+                <div className="gsap-reveal-card flex flex-col grow gap-8 p-6 md:p-8 lg:p-10 bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl md:rounded-4xl shadow-sm hover:shadow-md border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 dark:hover:border-custom-beige/40 transition-all duration-300">
                     <a
                         href={googleMapsLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group block"
+                        className="group block rounded-3xl focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                         title="Nuestra Ubicación"
                     >
-                        <div className="flex items-start gap-4 p-6 bg-custom-piel/5 dark:bg-custom-beige/5 rounded-[24px] hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300">
+                        <div className="flex items-start gap-4 p-6 bg-custom-piel/5 dark:bg-custom-beige/5 rounded-3xl hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300">
                             <div className="shrink-0 mt-1">
                                 <MapPinIcon className="w-8 h-8 text-custom-piel dark:text-custom-beige" />
                             </div>
@@ -157,7 +153,7 @@ export default function Location({ astroUrl }) {
                         </div>
                     </a>
 
-                    <div className="w-full relative pt-[56.25%] rounded-[24px] overflow-hidden border border-custom-piel/10 dark:border-custom-beige/10 bg-custom-piel/5 shrink-0">
+                    <div className="w-full relative pt-[56.25%] rounded-3xl overflow-hidden border border-custom-piel/10 dark:border-custom-beige/10 bg-custom-piel/5 shrink-0">
                         <iframe
                             title="Google Maps location"
                             src={googleMapsLocation}
@@ -173,10 +169,10 @@ export default function Location({ astroUrl }) {
                         href={moovitLocation}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group block"
+                        className="group block rounded-3xl focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                         title="Rutas transporte público"
                     >
-                        <div className="flex items-start gap-4 p-6 bg-custom-piel/5 dark:bg-custom-beige/5 rounded-[24px] hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300">
+                        <div className="flex items-start gap-4 p-6 bg-custom-piel/5 dark:bg-custom-beige/5 rounded-3xl hover:bg-custom-piel/10 dark:hover:bg-custom-beige/10 transition-colors duration-300">
                             <div className="shrink-0 mt-1">
                                 <BuildingStorefrontIcon className="w-8 h-8 text-custom-piel dark:text-custom-beige" />
                             </div>

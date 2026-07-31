@@ -2,11 +2,11 @@
 
 export default function PriceCard({ title, description, pricePrefix = false, children }) {
     const cardClasses =
-        "flex flex-col w-full sm:w-[350px] p-4 md:p-6 lg:p-8 bg-custom-beige-light dark:bg-custom-oscuro rounded-[32px] transition-shadow duration-300 shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:dark:border-custom-beige/40 hover:shadow-md";
+        "flex flex-col w-full sm:w-[350px] p-4 md:p-6 lg:p-8 bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl md:rounded-4xl transition-all duration-300 shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 dark:hover:border-custom-beige/40 hover:shadow-md";
 
     return (
         <div className={`gsap-reveal-card ${cardClasses}`}>
-            <div className="flex items-start gap-4 p-6 bg-custom-piel/5 dark:bg-custom-beige/5 rounded-[24px] mb-8">
+            <div className="flex items-start gap-4 p-6 bg-custom-piel/5 dark:bg-custom-beige/5 rounded-3xl mb-8">
                 <div>
                     <h3 className="text-xl font-medium text-custom-piel dark:text-custom-beige mb-2 font-fira">
                         {title}

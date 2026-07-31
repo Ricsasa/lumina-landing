@@ -1,5 +1,6 @@
 ---
 import Accordion from "../common/Accordion.astro";
+import SectionHeading from "../common/SectionHeading.astro";
 
 const items = [
     {
@@ -36,20 +37,11 @@ const items = [
 ---
 
 <section
-    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    class="flex flex-col items-center px-4 md:px-6 scroll-mt-36 md:scroll-mt-40 py-20 w-full"
     id="preguntas-frecuentes"
 >
-    <div class="mx-auto max-w-3xl text-center mb-12">
-        <h2
-            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
-        >
-            Preguntas frecuentes
-        </h2>
-        <p
-            class="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light px-4"
-        >
-            Responde a tus dudas sobre el tratamiento de Hollywood Peel.
-        </p>
-    </div>
+    <SectionHeading title="Preguntas frecuentes"
+        subtitle="Responde a tus dudas sobre el tratamiento de Hollywood Peel."
+    />
     <Accordion items={items} />
 </section>

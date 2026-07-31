@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Slider from '../common/Slider.jsx'
+import ImageCard from '../common/ImageCard.jsx'
 import { initCardAnimations } from "../../scripts/cardAnimation";
 
 
@@ -16,6 +17,7 @@ import MoniB from "../../assets/gallery/moniB.avif"
 import Puntos from "../../assets/gallery/puntos.avif"
 import RomanosA from "../../assets/gallery/romanosA.avif"
 import RomanosB from "../../assets/gallery/romanosB.avif"
+import SectionHeading from "../common/SectionHeading.jsx";
 
 const Gallery = () => {
     const galleryRef = useRef(null);
@@ -26,79 +28,53 @@ const Gallery = () => {
 
     return (
         <section
-            className="justify-center md:px-6 scroll-mt-24 py-12 flex flex-col items-center w-full"
+            className="flex flex-col items-center px-4 md:px-6 scroll-mt-24 py-20 w-full"
             id="galeria-principal">
-            <div className="py-8 mx-auto lg:py-16">
-                <div className="mx-auto max-w-screen-sm text-center mb-12">
-                    <h2
-                        className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
-                    >
-                        Galería
-                    </h2>
-                    <p
-                        className="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light"
-                    >
-                        ¡Ve algunos de nuestros resultados!
-                    </p>
+            <SectionHeading title="Galería"
+                subtitle="¡Ve algunos de nuestros resultados!"
+            />
+
+            <div ref={galleryRef} className="w-full max-w-3xl mx-auto flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-8 items-start">
+                <div className="gsap-reveal-card w-full md:col-span-6">
+                    <Slider
+                        image1={ErnestoA}
+                        image2={ErnestoB}
+                        image1Alt="Antes"
+                        image2Alt="Después"
+                    />
                 </div>
-
-                <div ref={galleryRef} className="mb-16 w-full px-6 container max-w-6xl mx-auto flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-8 items-center">
-                    <div className="gsap-reveal-card w-full md:col-span-6 md:mt-10">
-                        <Slider
-                            image1={ErnestoA}
-                            image2={ErnestoB}
-                            image1Alt="Antes"
-                            image2Alt="Después"
-
-                        />
-                    </div>
-                    <div className="gsap-reveal-card w-full md:col-span-6 md:mt-10">
-                        <Slider
-                            image1={MaraA}
-                            image2={MaraB}
-                            image1Alt="Antes"
-                            image2Alt="Después"
-                        />
-                    </div>
-                    <div className="gsap-reveal-card w-full md:col-span-6 md:mt-10">
-                        <Slider
-                            image1={MoniA}
-                            image2={MoniB}
-                            image1Alt="Antes"
-                            image2Alt="Después"
-                        />
-                    </div>
-                    <div className="gsap-reveal-card w-full md:col-span-6 md:mt-10">
-                        <Slider
-                            image1={RomanosA}
-                            image2={RomanosB}
-                            image1Alt="Antes"
-                            image2Alt="Después"
-                        />
-                    </div>
-                    <div className="gsap-reveal-card w-full md:col-span-6 md:mt-10 flex justify-center">
-                        <img
-                            src={Puntos.src}
-                            alt="Tatuajes de puntos"
-                            className="w-3/4"
-                        />
-                    </div>
-                    <div className="gsap-reveal-card w-full md:col-span-6 md:mt-10 flex justify-center">
-                        <img
-                            src={Axilas.src}
-                            alt="Axilas"
-                            className="w-3/4"
-                        />
-                    </div>
-                    <div className="gsap-reveal-card w-full md:col-span-6 md:col-start-4 md:mt-10 flex justify-center">
-                        <img
-                            src={Cristopher.src}
-                            alt="Tatuajes de nombre"
-                            className="w-3/4"
-                        />
-                    </div>
-
-
+                <div className="gsap-reveal-card w-full md:col-span-6">
+                    <Slider
+                        image1={MaraA}
+                        image2={MaraB}
+                        image1Alt="Antes"
+                        image2Alt="Después"
+                    />
+                </div>
+                <div className="gsap-reveal-card w-full md:col-span-6">
+                    <Slider
+                        image1={MoniA}
+                        image2={MoniB}
+                        image1Alt="Antes"
+                        image2Alt="Después"
+                    />
+                </div>
+                <div className="gsap-reveal-card w-full md:col-span-6">
+                    <Slider
+                        image1={RomanosA}
+                        image2={RomanosB}
+                        image1Alt="Antes"
+                        image2Alt="Después"
+                    />
+                </div>
+                <div className="gsap-reveal-card w-full md:col-span-6">
+                    <ImageCard src={Puntos.src} alt="Tatuajes de puntos" />
+                </div>
+                <div className="gsap-reveal-card w-full md:col-span-6">
+                    <ImageCard src={Axilas.src} alt="Axilas" />
+                </div>
+                <div className="gsap-reveal-card w-full md:col-span-6 md:col-start-4">
+                    <ImageCard src={Cristopher.src} alt="Tatuajes de nombre" />
                 </div>
             </div>
         </section>

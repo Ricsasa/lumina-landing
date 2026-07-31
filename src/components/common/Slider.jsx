@@ -9,10 +9,10 @@ export default function Slider({
     description
 }) {
     return (
-        <div className="w-[60%] md:w-xs max-w-4xl mx-auto flex flex-col overflow-hidden bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl md:rounded-[32px] shadow-sm border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 hover:dark:border-custom-beige/40 transition-colors duration-300">
+        <div className="w-full max-w-xs mx-auto flex flex-col overflow-hidden bg-custom-beige-light dark:bg-custom-oscuro rounded-2xl md:rounded-4xl shadow-sm hover:shadow-md border border-custom-piel/10 dark:border-custom-beige/20 hover:border-custom-piel/20 dark:hover:border-custom-beige/40 transition-all duration-300">
 
             {/* Image Comparison Area */}
-            <div className="relative w-full aspect-auto rounded-t-2xl md:rounded-t-[32px] overflow-hidden bg-black/5 dark:bg-white/5">
+            <div className="relative w-full aspect-auto rounded-t-2xl md:rounded-t-4xl overflow-hidden bg-black/5 dark:bg-white/5">
                 <ReactCompareSlider
                     className="w-full h-full"
                     handle={
@@ -31,14 +31,14 @@ export default function Slider({
                         <ReactCompareSliderImage
                             src={image1.src}
                             alt={image1Alt}
-                            className="object-cover w-3 h-3"
+                            className="object-cover w-full h-full"
                         />
                     }
                     itemTwo={
                         <ReactCompareSliderImage
                             src={image2.src}
                             alt={image2Alt}
-                            className="object-cover w-3 h-3"
+                            className="object-cover w-full h-full"
                         />
                     }
                 />

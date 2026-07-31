@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import PriceCard from "../common/PriceCard";
+import SectionHeading from "../common/SectionHeading.jsx";
 
 export default function CuantoCuesta({ astroUrl }) {
     const [data, setData] = useState(null);
@@ -19,19 +20,14 @@ export default function CuantoCuesta({ astroUrl }) {
 
     return (
         <section
-            className="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+            className="flex flex-col items-center px-4 md:px-6 scroll-mt-36 md:scroll-mt-40 py-20 w-full"
             id="costos"
         >
-            <div className="mx-auto max-w-3xl text-center mb-12">
-                <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira">
-                    ¿Cuánto cuesta?
-                </h2>
-                <p className="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light px-4">
-                    Conoce nuestros precios y paquetes.
-                </p>
-            </div>
+            <SectionHeading title="¿Cuánto cuesta?"
+                subtitle="Conoce nuestros precios y paquetes."
+            />
 
-            <div className="w-[calc(100vw-2em)] max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 md:gap-8">
+            <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 md:gap-8">
                 <PriceCard
                     title="Cejas o Microblading"
                     description="Eliminación de microblading o micropigmentación de cejas."

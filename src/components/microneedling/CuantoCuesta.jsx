@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import WhatsappWhite from "../../assets/external/whatsapp-white.svg";
 import PriceCard from "../common/PriceCard";
+import SectionHeading from "../common/SectionHeading.jsx";
 
 const whatsappMessage =
     "Hola, estoy interesado en servicios personalizados de microneedling.";
@@ -24,19 +25,14 @@ export default function CuantoCuesta({ astroUrl }) {
 
     return (
         <section
-            className="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+            className="flex flex-col items-center px-4 md:px-6 scroll-mt-36 md:scroll-mt-40 py-20 w-full"
             id="costos"
         >
-            <div className="mx-auto max-w-3xl text-center mb-12">
-                <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira">
-                    ¿Cuánto cuesta?
-                </h2>
-                <p className="mt-4 text-base md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light px-4">
-                    Conoce nuestros precios y paquetes.
-                </p>
-            </div>
+            <SectionHeading title="¿Cuánto cuesta?"
+                subtitle="Conoce nuestros precios y paquetes."
+            />
 
-            <div className="w-[calc(100vw-2em)] max-w-5xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8 justify-center">
+            <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8 justify-center">
                 <PriceCard
                     title="Microneedling"
                     description="Sesión completa con peptonas + terapia de luz roja."
@@ -75,7 +71,7 @@ export default function CuantoCuesta({ astroUrl }) {
                         href={`https://wa.me/${telefonoWhatsapp}?text=${encodeURIComponent(whatsappMessage)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-6 flex items-center justify-center gap-2 bg-custom-whatsapp-green text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                        className="mt-6 flex items-center justify-center gap-2 bg-custom-whatsapp-green text-white px-8 py-4 rounded-full font-bold shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-custom-piel/50"
                     >
                         <img
                             src={WhatsappWhite.src}

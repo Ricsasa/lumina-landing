@@ -2,24 +2,16 @@
 import ImageParagraph from "../common/ImageParagraph.astro";
 import Peptona from "../../assets/services/microneedling/peptona.avif";
 import LuzRoja from "../../assets/services/microneedling/luzroja.avif";
+import SectionHeading from "../common/SectionHeading.astro";
 ---
 
 <section
-    class="flex flex-col items-center md:px-6 scroll-mt-28 py-20 w-full"
+    class="flex flex-col items-center px-4 md:px-6 scroll-mt-36 md:scroll-mt-40 py-20 w-full"
     id="que-incluye"
 >
-    <div class="mx-auto max-w-3xl text-center mb-12">
-        <h2
-            class="text-3xl md:text-5xl font-medium tracking-tight text-custom-piel dark:text-custom-beige font-fira"
-        >
-            ¿Qué incluye mi sesión?
-        </h2>
-        <p
-            class="mt-4 text-sm md:text-lg text-custom-oscuro/70 dark:text-custom-piel font-light px-4"
-        >
-            Conoce los beneficios de tu sesión.
-        </p>
-    </div>
+    <SectionHeading title="¿Qué incluye mi sesión?"
+        subtitle="Conoce los beneficios de tu sesión."
+    />
 
     <div class="w-full max-w-5xl mx-auto px-4 flex flex-col gap-16 md:gap-24">
         <ImageParagraph position="left" imageSrc={Peptona} imageAlt="Peptona">

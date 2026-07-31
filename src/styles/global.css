@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+/*
+  Design contract — keep new sections and cards on these values.
+
+  Section wrapper   flex flex-col items-center px-4 md:px-6 py-20 w-full
+                    (Reviews is the one exception: padding sits on its children
+                     so the marquee can run full-bleed. Never use vw to bleed —
+                     it overflows the body where scrollbars take layout width.)
+  Section heading   <SectionHeading title subtitle />  (components/common)
+  Anchor offset     scroll-mt-24                  (index: fixed header only)
+                    scroll-mt-36 md:scroll-mt-40  (subpages: header + sticky InnerMenu)
+  Content width     max-w-6xl grids / max-w-5xl prose+image / max-w-3xl accordion
+                    max-w-3xl gallery tracks; gallery cards cap at max-w-xs
+                    so a col-span-12 row stays comfortable to drag/scan
+
+  Card background   bg-custom-beige-light dark:bg-custom-oscuro  (all cards)
+  Photography       saturate-60 on service/facility/prose imagery;
+                    gallery results stay true-colour so before/after reads honestly
+  Label font        font-fira for headings, nav and labels; font-neue is body copy
+
+  Card surface      rounded-2xl md:rounded-4xl    (16px -> 32px)
+  Inset block       rounded-3xl                   (24px)
+  Control           rounded-full
+  Elevation         shadow-sm hover:shadow-md
+  Border            border-custom-piel/10 dark:border-custom-beige/20
+  Border hover      hover:border-custom-piel/20 dark:hover:border-custom-beige/40
+  Transition        transition-all duration-300
+  Focus             focus:outline-none focus:ring-2 focus:ring-custom-piel/50
+
+  Every hover/focus state must be declared for BOTH themes — a dark-only
+  hover reads as a dead control in light mode, which is the default.
+*/
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 
